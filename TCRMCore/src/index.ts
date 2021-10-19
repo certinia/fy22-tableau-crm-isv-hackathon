@@ -1,10 +1,10 @@
 /*
- * Copyright (c) 2020 FinancialForce.com, inc. All rights reserved.
+ * Copyright (c) 2021 FinancialForce.com, inc. All rights reserved.
  */
 
-import { Input, Bundle } from "./types";
+import { Params, Bundle } from "./types";
 
-export async function createBundle(input: Input): Promise<Bundle> {
+export async function createBundle(input: Params): Promise<Bundle> {
     return {
         test: JSON.stringify(input.getState())
     };

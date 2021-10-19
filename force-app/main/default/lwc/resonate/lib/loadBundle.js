@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 FinancialForce.com, inc. All rights reserved.
+ * Copyright (c) 2021 FinancialForce.com, inc. All rights reserved.
  */
 
 import bundleUrl from '@salesforce/resourceUrl/tcrmCore';
@@ -13,7 +13,9 @@ export async function loadBundle(cRef) {
         if(!bundle) {
             bundle = window.tcrmCore;
         }
-        return await bundle.createBundle({ 
+        return await bundle.createBundle({
+            title: cRef.title,
+            config: cRef.config,
             getState: cRef.getState.bind(cRef),
             setState: cRef.setState.bind(cRef)
         });

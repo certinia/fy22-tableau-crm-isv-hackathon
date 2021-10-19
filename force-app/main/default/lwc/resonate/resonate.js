@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 FinancialForce.com, inc. All rights reserved.
+ * Copyright (c) 2021 FinancialForce.com, inc. All rights reserved.
  */
 
 import { LightningElement, api, track } from "lwc";
@@ -14,15 +14,10 @@ class Resonate extends LightningElement {
 
     @track state;
     @track bundle;
-    @track store;
 
     async connectedCallback() {
-        if (!window.ffdcStore) {
-            window.ffdcStore = "Secret" + Math.random();
-        }
         this.bundle = JSON.stringify(await loadBundle(this));
         this.state = JSON.stringify(this.getState());
-        this.store = window.ffdcStore;
     }
 
     handleRefresh() {
