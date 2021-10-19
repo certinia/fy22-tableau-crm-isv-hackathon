@@ -7,6 +7,7 @@ import { LightningElement, api, track } from "lwc";
 class Resonate extends LightningElement {
 
     @api title;
+    @api config;
     @api getState;
     @api setState;
 
