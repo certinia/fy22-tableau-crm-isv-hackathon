@@ -1,5 +1,5 @@
 {
-	"name": "Resonate",
+	"name": "resonate",
 	"description": "Resonate",
 	"version": "1.0.0",
 	"engines": {
@@ -22,7 +22,8 @@
 		"webpack": "5.41.1",
 		"webpack-cli": "4.7.2",
 		"ts-loader": "9.2.3",
-		"jsonschema": "1.4.0"
+		"jsonschema": "1.4.0",
+		"url": "0.11.0"
 	},
 	"dependencies": {}
 }
