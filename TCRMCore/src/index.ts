@@ -9,6 +9,6 @@ import { Params, Bundle } from "./types";
 export async function createBundle(input: Params): Promise<Bundle> {
     const config: Config = parseConfig(input.config);
     return {
-        test: JSON.stringify(input.getState())
+       autoplayEnabled: () => config.autoplay
     };
 }

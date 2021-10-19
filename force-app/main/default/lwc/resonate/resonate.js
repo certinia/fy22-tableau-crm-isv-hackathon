@@ -12,29 +12,51 @@ class Resonate extends LightningElement {
     @api getState;
     @api setState;
 
-    bundle;
+    engine;
 
-    @track state = "";
     @track error = null;
+    @track paused = true;
+    @track state = null;
 
     async connectedCallback() {
+        // bundle
         try {
-            this.bundle = await loadBundle(this);
+            this.engine = await loadBundle(this);
         } catch (err) {
             this.error = err;
         }
+        // init
+        this.paused = !this.engine.autoplayEnabled();
+
     }
 
     get hasError() {
         return this.error != null;
     }
 
+    get pausePlayIcon() {
+        return this.paused ? "utility:play" : "utility:pause";
+    }
+
     get error() {
         return this.error.message;
     }
 
+
     handleRefresh() {
         this.state = JSON.stringify(this.getState());
+    }
+
+    handlePausePlay() {
+        this.paused = !this.paused;
+    }
+
+    handleJumpLeft() {
+        
+    }
+
+    handleJumpRight() {
+        
     }
 
 }

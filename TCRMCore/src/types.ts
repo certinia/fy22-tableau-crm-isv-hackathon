@@ -12,4 +12,8 @@ export type Params = {
 };
 
 export type Bundle = {
+    autoplayEnabled: BundleAutoPlayEnabledFunction
 };
+
+
+type BundleAutoPlayEnabledFunction = () => boolean;

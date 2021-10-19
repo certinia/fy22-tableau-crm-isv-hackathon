@@ -9,7 +9,26 @@
                         </h2>
                     </div>
                     <div class="slds-no-flex">
-                        <button class="slds-button slds-button_neutral">New</button>
+                        <lightning-button-group>
+                            <lightning-button-icon 
+                                variant="border-filled"
+                                icon-name="utility:jump_to_left"
+                                disabled={hasError}
+                                onclick={handleJumpLeft}>
+                            </lightning-button-icon>
+                            <lightning-button-icon 
+                                variant="border-filled"
+                                icon-name={pausePlayIcon}
+                                disabled={hasError}
+                                onclick={handlePausePlay}>
+                            </lightning-button-icon>
+                            <lightning-button-icon 
+                                variant="border-filled"
+                                icon-name="utility:jump_to_right"
+                                disabled={hasError}
+                                onclick={handleJumpRight}>
+                            </lightning-button-icon>
+                        </lightning-button-group>
                     </div>
                 </header>
             </div>
