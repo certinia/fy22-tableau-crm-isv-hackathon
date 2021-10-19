@@ -3,6 +3,7 @@
  */
 
 import { LightningElement, api, track } from "lwc";
+import { loadJsonPatch } from "./lib/jsonPatch";
 
 class Resonate extends LightningElement {
 
@@ -14,7 +15,8 @@ class Resonate extends LightningElement {
     @track state;
     @track store;
 
-    connectedCallback() {
+    async connectedCallback() {
+        const patch = await loadJsonPatch(this);
         if (!window.ffdcStore) {
             window.ffdcStore = "Secret" + Math.random();
         }
