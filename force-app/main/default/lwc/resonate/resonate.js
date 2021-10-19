@@ -3,7 +3,6 @@
  */
 
 import { LightningElement, api, track } from "lwc";
-import { loadJsonPatch } from "./lib/jsonPatch";
 
 class Resonate extends LightningElement {
 
