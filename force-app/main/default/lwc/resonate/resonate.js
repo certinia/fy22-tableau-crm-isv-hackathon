@@ -3,6 +3,7 @@
  */
 
 import { LightningElement, api, track } from "lwc";
+import { loadBundle } from "./lib/loadBundle";
 
 class Resonate extends LightningElement {
 
@@ -12,13 +13,14 @@ class Resonate extends LightningElement {
     @api setState;
 
     @track state;
+    @track bundle;
     @track store;
 
     async connectedCallback() {
-        const patch = await loadJsonPatch(this);
         if (!window.ffdcStore) {
             window.ffdcStore = "Secret" + Math.random();
         }
+        this.bundle = JSON.stringify(await loadBundle(this));
         this.state = JSON.stringify(this.getState());
         this.store = window.ffdcStore;
     }
