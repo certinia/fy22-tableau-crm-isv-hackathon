@@ -6,6 +6,6 @@ import { Input, Bundle } from "./types";
 
 export async function createBundle(input: Input): Promise<Bundle> {
     return {
-        test: "test"
+        test: JSON.stringify(input.getState())
     };
 }
