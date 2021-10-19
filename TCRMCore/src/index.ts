@@ -3,7 +3,7 @@
  */
 
 enum Test {
-    Value = "value";
+    Value = "value"
 }
 
 export default Test;
