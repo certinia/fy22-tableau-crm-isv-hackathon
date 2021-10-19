@@ -10,7 +10,7 @@ function jsonParseError(): never {
 }
 
 function humanReadableValidationError(err: ValidationError): never {
-    const message: string = `Validation failed for config, path: "${err.path.join(".")}", property: ${err.property}, message: ${err.message}`;
+    const message: string = `Validation failed for config, path: "${err.path.join(".")}", property: "${err.property}", message: "${err.message}"`;
     throw new Error(message);
 }
 

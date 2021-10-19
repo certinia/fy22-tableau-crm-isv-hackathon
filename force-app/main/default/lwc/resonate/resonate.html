@@ -1,26 +1,41 @@
 <template>
-    <div class="tcrm-fit slds-grid slds-grid_vertical">
-        <lightning-card title={title} class="slds-col" style="display: flex;">
-            <template if:false={hasError}>
-                State: {state}<br/>
-                Bundle: {bundle}<br/>
-                <lightning-button
-                    variant="brand"
-                    label="Refresh"
-                    onclick={handleRefresh}>
-                </lightning-button>
-            </template>
-            <template if:true={hasError}>
-                <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
-                    <span class="slds-assistive-text">error</span>
-                    <span class="slds-icon_container slds-icon-utility-error slds-var-m-right_x-small" title="Description of icon when needed">
-                        <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
-                        </svg>
-                    </span>
-                    {error}
+    <div class="tcrm-fit">
+        <article class="slds-card" style="height: 100%">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span>{title}</span>
+                        </h2>
+                    </div>
+                    <div class="slds-no-flex">
+                        <button class="slds-button slds-button_neutral">New</button>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <div class="tcrm-in-card">
+                    <template if:false={hasError}>
+                        State: {state}<br/>
+                        <lightning-button
+                            variant="brand"
+                            label="Refresh"
+                            onclick={handleRefresh}>
+                        </lightning-button>
+                    </template>
+                    <template if:true={hasError}>
+                        <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                            <span class="slds-assistive-text">error</span>
+                            <span class="slds-icon_container slds-icon-utility-error slds-var-m-right_x-small" title="Description of icon when needed">
+                                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                                </svg>
+                            </span>
+                            {error}
+                        </div>
+                    </template>
                 </div>
-            </template>
-        </lightning-card>
+            </div>
+        </article>        
     </div>
 </template>
