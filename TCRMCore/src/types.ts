@@ -2,7 +2,7 @@
  * Copyright (c) 2021 FinancialForce.com, inc. All rights reserved.
  */
  
-export type State = any;
+export type State = Record<string, unknown>;
 
 export type Params = {
     config: string,
