@@ -1,0 +1,8 @@
+{
+    "autoplay": true,
+    "steps": [{
+        "title": "A test step",
+        "description": "A description",
+        "operations": []
+    }]
+}
