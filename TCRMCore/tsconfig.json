@@ -1,0 +1,14 @@
+/* https://www.typescriptlang.org/tsconfig */
+{
+	"compilerOptions": {
+		"target": "es6",
+		"module": "es6",
+		"lib": ["es2019", "dom"],
+		"sourceMap": true,
+		"strict": true,
+		"noImplicitReturns": true,
+		"moduleResolution": "node",
+		"esModuleInterop": true
+	},
+	"include": ["src/**/*", "types/**/*"]
+}
