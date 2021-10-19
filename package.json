@@ -7,8 +7,8 @@
 		"npm": ">=7"
 	},
 	"scripts": {
-		"build": "webpack --config FRBCore/webpack.config.js",
-		"build:dev": "webpack --config FRBCore/webpack.dev.config.js"
+		"build": "webpack --config TCRMCore/webpack.config.js",
+		"build:dev": "webpack --config TCRMCore/webpack.dev.config.js"
 	},
 	"repository": {
 		"type": "git",
