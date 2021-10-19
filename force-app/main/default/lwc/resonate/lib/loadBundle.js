@@ -13,7 +13,10 @@ export async function loadBundle(cRef) {
         if(!bundle) {
             bundle = window.tcrmCore;
         }
-        return bundle
+        return await bundle.createBundle({ 
+            getState: cRef.getState.bind(cRef),
+            setState: cRef.setState.bind(cRef)
+        });
     }
 
 }

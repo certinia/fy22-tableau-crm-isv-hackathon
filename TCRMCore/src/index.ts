@@ -2,8 +2,10 @@
  * Copyright (c) 2020 FinancialForce.com, inc. All rights reserved.
  */
 
-enum Test {
-    Value = "value"
-}
+import { Input, Bundle } from "./types";
 
-export default Test;
+export async function createBundle(input: Input): Promise<Bundle> {
+    return {
+        test: "test"
+    };
+}
