@@ -25,5 +25,7 @@
 		"jsonschema": "1.4.0",
 		"url": "0.11.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"fast-json-patch": "^3.1.0"
+	}
 }
