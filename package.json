@@ -39,5 +39,8 @@
     "**/{aura|lwc}/**": [
       "eslint"
     ]
+  },
+  "dependencies": {
+    "fast-json-patch": "^3.1.0"
   }
 }
