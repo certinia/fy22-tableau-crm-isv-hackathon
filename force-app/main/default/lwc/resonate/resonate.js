@@ -12,12 +12,25 @@ class Resonate extends LightningElement {
     @api getState;
     @api setState;
 
-    @track state;
-    @track bundle;
+    bundle;
+
+    @track state = "";
+    @track error = null;
 
     async connectedCallback() {
-        this.bundle = JSON.stringify(await loadBundle(this));
-        this.state = JSON.stringify(this.getState());
+        try {
+            this.bundle = await loadBundle(this);
+        } catch (err) {
+            this.error = err;
+        }
+    }
+
+    get hasError() {
+        return this.error != null;
+    }
+
+    get error() {
+        return this.error.message;
     }
 
     handleRefresh() {
