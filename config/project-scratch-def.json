@@ -1,7 +1,11 @@
 {
-  "orgName": "bslater company",
+  "orgName": "financialforce-tcrm-2021",
   "edition": "Developer",
-  "features": [],
+  "features": [ 
+    "AnalyticsAdminPerms",
+    "DevelopmentWave",
+    "DebugApex"
+  ],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
