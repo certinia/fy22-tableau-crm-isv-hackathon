@@ -12,12 +12,26 @@
     }, {
         "title": "With some selection",
         "description": "As you can see, we can select values in a chart as though a user clicked the bar!\nNext is filtering...",
-        "time": 5000,
+        "time": 10000,
         "operations": [{
             "op": "add", "path": "/state/datasets/Accounts/0/filter/values", "value": "Test 1"
         }]
     }, {
         "title": "With the filter",
+        "description": "Dimensions next...",
+        "time": 5000,
+        "operations": [{
+            "op": "replace", "path": "/pageId", "value": "c85c99be-89cd-46a5-8448-5b8f7ea72dd7"
+        }]
+    }, {
+        "title": "With the filter",
+        "description": "Dimensions next...",
+        "time": 5000,
+        "operations": [{
+            "op": "replace", "path": "/pageId", "value": "7a275ce1-6bb4-418a-8746-fc1b81cf230f"
+        }]
+    }, {
+        "title": "With a new dimension",
         "description": "And we're done, this is the last step, nothing else to see here.",
         "time": 0,
         "operations": []
