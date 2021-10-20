@@ -21,12 +21,11 @@ class Resonate extends LightningElement {
     async connectedCallback() {
         // bundle
         try {
-            this.engine = await loadBundle(this).engine;
+            this.engine = (await loadBundle(this)).engine;
         } catch (err) {
             this.error = err;
         }
         this.ready = true;
-
     }
 
     get hasError() {
