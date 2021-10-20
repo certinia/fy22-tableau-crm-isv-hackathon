@@ -13,19 +13,19 @@
                             <lightning-button-icon 
                                 variant="border-filled"
                                 icon-name="utility:jump_to_left"
-                                disabled={hasError}
+                                disabled={buttonsDisabled}
                                 onclick={handleJumpLeft}>
                             </lightning-button-icon>
                             <lightning-button-icon 
                                 variant="border-filled"
                                 icon-name={pausePlayIcon}
-                                disabled={hasError}
+                                disabled={buttonsDisabled}
                                 onclick={handlePausePlay}>
                             </lightning-button-icon>
                             <lightning-button-icon 
                                 variant="border-filled"
                                 icon-name="utility:jump_to_right"
-                                disabled={hasError}
+                                disabled={buttonsDisabled}
                                 onclick={handleJumpRight}>
                             </lightning-button-icon>
                         </lightning-button-group>

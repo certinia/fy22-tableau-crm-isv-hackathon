@@ -28,6 +28,7 @@ export const ConfigSchema: Schema = {
         steps: {
             type: "array",
             required: true,
+            minItems: 1,
             items: {
                 type: "object",
                 required: true,

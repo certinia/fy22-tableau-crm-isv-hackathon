@@ -4,11 +4,14 @@
 
 import { Config } from "./config/config";
 import { parseConfig } from "./config/parse";
+import Engine from "./engine/core";
 import { Params, Bundle } from "./types";
 
 export async function createBundle(input: Params): Promise<Bundle> {
-    const config: Config = parseConfig(input.config);
+    const config: Config = parseConfig(input.config),
+        engine: Engine = new Engine(config, input.getState, input.setState);
+
     return {
-       autoplayEnabled: () => config.autoplay
+        engine
     };
 }
