@@ -136,7 +136,7 @@ export function next(s: ModelState): ModelState {
             }
             const resultState: ModelStateNormal = {
                 ...newState,
-                paused: nextStepIndex === newState.config.steps.length - 1,
+                paused: newState.paused || nextStepIndex === newState.config.steps.length - 1,
                 inverses: newInverses ? newState.inverses.concat([newInverses]) : newState.inverses,
                 step: {
                     index: nextStepIndex,

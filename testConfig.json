@@ -1,5 +1,5 @@
 {
-    "autoplay": true,
+    "autoplay": false,
     "steps": [{
         "title": "A test step",
         "description": "A description",
@@ -13,6 +13,13 @@
         "title": "A test step 2",
         "description": "A description 2",
         "time": 5000,
+        "operations": [{
+            "op": "add", "path": "/state/datasets/Accounts/0/filter/values", "value": "Test 1"
+        }]
+    }, {
+        "title": "A test step 3",
+        "description": "done !",
+        "time": 0,
         "operations": []
     }]
 }

@@ -68,7 +68,9 @@ class Resonate extends LightningElement {
     }
 
     writeCachedState() {
-        this.setState(this.cachedState);
+        if (JSON.stringify(this.cachedState) != JSON.stringify(this.getState())) {
+            this.setState(this.cachedState);
+        }
     }
 
     getStateFromEA() {
