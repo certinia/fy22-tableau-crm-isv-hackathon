@@ -38,6 +38,7 @@ class Resonate extends LightningElement {
             });
         this.model = model;
         this.viewState = model.viewState;
+        setInterval(() => this.tick(), 1000);
     }
 
     get hasError() {
@@ -69,6 +70,13 @@ class Resonate extends LightningElement {
     }
 
     // end nasty hack
+
+    tick() {
+        this.readCachedState();
+        this.model.tick();
+        this.viewState = this.model.viewState;
+        this.writeCachedState();
+    }
 
     handlePausePlay() {
         this.readCachedState();
