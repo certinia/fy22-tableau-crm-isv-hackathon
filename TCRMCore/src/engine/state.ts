@@ -82,7 +82,7 @@ export function tick(s: ModelState): ModelState {
                 ...newState,
                 step: {
                     ...newState.step,
-                    elapsedTime: newState.step.elapsedTime + 1
+                    elapsedTime: newState.step.elapsedTime + 10
                 }
             };
             if (newStateAfterTick.step.elapsedTime >= newStateAfterTick.config.steps[newStateAfterTick.step.index].time) {

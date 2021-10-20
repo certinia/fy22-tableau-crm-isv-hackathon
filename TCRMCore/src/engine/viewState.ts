@@ -37,7 +37,7 @@ export function viewStateFromState(s: ModelState): ViewState {
                 stepTitle: s.config.steps[s.step.index].title,
                 stepDescription: s.config.steps[s.step.index].description,
                 paused: s.paused,
-                progressPercentage: s.paused ? 0 : (s.step.elapsedTime / s.config.steps[s.step.index].time)
+                progressPercentage: s.paused ? 0 : (s.step.elapsedTime / s.config.steps[s.step.index].time) * 100
             };
     }
 

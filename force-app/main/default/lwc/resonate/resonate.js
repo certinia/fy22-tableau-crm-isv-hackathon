@@ -38,7 +38,7 @@ class Resonate extends LightningElement {
             });
         this.model = model;
         this.viewState = model.viewState;
-        setInterval(() => this.tick(), 1000);
+        setInterval(() => this.tick(), 10);
     }
 
     get hasError() {
