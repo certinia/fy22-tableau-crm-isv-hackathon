@@ -13,19 +13,19 @@
                             <lightning-button-icon 
                                 variant="border-filled"
                                 icon-name="utility:jump_to_left"
-                                disabled={viewState.previousEnabled}
+                                disabled={viewState.previousDisabled}
                                 onclick={handleJumpLeft}>
                             </lightning-button-icon>
                             <lightning-button-icon 
                                 variant="border-filled"
                                 icon-name={pausePlayIcon}
-                                disabled={viewState.playPauseEnabled}
+                                disabled={viewState.playPauseDisabled}
                                 onclick={handlePausePlay}>
                             </lightning-button-icon>
                             <lightning-button-icon 
                                 variant="border-filled"
                                 icon-name="utility:jump_to_right"
-                                disabled={viewState.nextEnabled}
+                                disabled={viewState.nextDisabled}
                                 onclick={handleJumpRight}>
                             </lightning-button-icon>
                         </lightning-button-group>

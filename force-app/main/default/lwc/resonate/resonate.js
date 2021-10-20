@@ -14,11 +14,13 @@ class Resonate extends LightningElement {
 
     model;
 
+    cachedState = { mock: "state" };
+
     @track viewState = {
         error: "",
-        previousEnabled: false,
-        playPauseEnabled: false,
-        nextEnabled: false,
+        previousDisabled: false,
+        playPauseDisabled: false,
+        nextDisabled: false,
         stepTitle: "",
         stepDescription: "", 
         paused: false,
@@ -29,10 +31,10 @@ class Resonate extends LightningElement {
         // bundle
         const bundle = await loadBundle(this),
             model = bundle.createModel({
-                title: cRef.title,
-                config: cRef.config,
-                getState: cRef.getState.bind(cRef),
-                setState: cRef.setState.bind(cRef)
+                title: this.title,
+                config: this.config,
+                getState: this.getStateFromEA.bind(this),
+                setState: this.setStateToEA.bind(this)
             });
         this.model = model;
         this.viewState = model.viewState;
@@ -46,19 +48,47 @@ class Resonate extends LightningElement {
         return this.viewState.paused ? "utility:play" : "utility:pause";
     }
 
+    /**
+     * So I can't properly pass the get/setState functions to TS, need this hack
+     */
+
+    readCachedState() {
+        this.cachedState = this.getState();
+    }
+
+    writeCachedState() {
+        this.setState(this.cachedState);
+    }
+
+    getStateFromEA() {
+        return this.cachedState;
+    }
+
+    setStateToEA(s) {
+        this.cachedState = s;
+    }
+
+    // end nasty hack
+
     handlePausePlay() {
+        this.readCachedState();
         this.model.playPause();
-        this.viewState = model.viewState;
+        this.viewState = this.model.viewState;
+        this.writeCachedState();
     }
 
     handleJumpLeft() {
+        this.readCachedState();
         this.model.previous();
-        this.viewState = model.viewState;
+        this.viewState = this.model.viewState;
+        this.writeCachedState();
     }
 
     handleJumpRight() {
+        this.readCachedState();
         this.model.next();
-        this.viewState = model.viewState;
+        this.viewState = this.model.viewState;
+        this.writeCachedState();
     }
 
 }

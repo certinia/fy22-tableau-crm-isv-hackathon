@@ -3,10 +3,12 @@
     "steps": [{
         "title": "A test step",
         "description": "A description",
+        "time": 5,
         "operations": []
     }, {
         "title": "A test step 2",
         "description": "A description 2",
+        "time": 5,
         "operations": []
     }]
 }

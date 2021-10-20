@@ -104,9 +104,6 @@ export function previous(s: ModelState): ModelState {
             if (nextStepIndex < 0) {
                 nextStepIndex = 0;
             }
-            if (nextStepIndex < currentStepIndex) {
-                applyStateStepTransition(s, false);
-            }
             const resultState: ModelStateNormal = {
                 ...newState,
                 step: {
@@ -114,6 +111,9 @@ export function previous(s: ModelState): ModelState {
                     elapsedTime: 0
                 }
             };
+            if (nextStepIndex < currentStepIndex) {
+                applyStateStepTransition(resultState, false);
+            }
             return resultState;
         }
     }
