@@ -101,6 +101,9 @@ export function previous(s: EngineState): EngineState {
             if (nextStepIndex < 0) {
                 nextStepIndex = 0;
             }
+            if (nextStepIndex < currentStepIndex) {
+                applyStateStepTransition(s, false);
+            }
             const resultState: EngineStateNormal = {
                 ...newState,
                 step: {
@@ -124,9 +127,14 @@ export function next(s: EngineState): EngineState {
             if (nextStepIndex > newState.config.steps.length - 1) {
                 nextStepIndex = newState.config.steps.length - 1;
             }
+            let newInverses: Array<Operation> | null = null;
+            if (nextStepIndex > currentStepIndex) {
+                newInverses = applyStateStepTransition(s, true);
+            }
             const resultState: EngineStateNormal = {
                 ...newState,
                 paused: nextStepIndex === newState.config.steps.length - 1,
+                inverses: newInverses ? newState.inverses.concat([newInverses]) : newState.inverses,
                 step: {
                     index: nextStepIndex,
                     elapsedTime: 0
