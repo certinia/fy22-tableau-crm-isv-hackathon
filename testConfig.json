@@ -4,7 +4,11 @@
         "title": "A test step",
         "description": "A description",
         "time": 5000,
-        "operations": []
+        "operations": [{
+            "op": "add", "path": "/state/steps/Name_1/values", "value": [
+                "Sample Account for Entitlements"
+            ]
+        }]
     }, {
         "title": "A test step 2",
         "description": "A description 2",

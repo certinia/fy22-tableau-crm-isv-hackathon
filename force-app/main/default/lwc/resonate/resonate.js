@@ -38,7 +38,9 @@ class Resonate extends LightningElement {
             });
         this.model = model;
         this.viewState = model.viewState;
-        setInterval(() => this.tick(), 10);
+        if (!this.isInEditMode()) {
+            setInterval(() => this.tick(), 10);
+        }
     }
 
     get hasError() {
@@ -47,6 +49,14 @@ class Resonate extends LightningElement {
 
     get pausePlayIcon() {
         return this.viewState.paused ? "utility:play" : "utility:pause";
+    }
+
+    /**
+     * Hack to see if we're in the editor, setInterval seems to break the whole UI
+     */
+    
+    isInEditMode() {
+        return document.location.href.toLowerCase().endsWith("edit")
     }
 
     /**
@@ -97,6 +107,10 @@ class Resonate extends LightningElement {
         this.model.next();
         this.viewState = this.model.viewState;
         this.writeCachedState();
+    }
+
+    handleDebug() {
+        window.alert(JSON.stringify(this.getState(), null, 2));
     }
 
 }

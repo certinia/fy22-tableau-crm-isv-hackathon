@@ -12,6 +12,11 @@
                         <lightning-button-group>
                             <lightning-button-icon 
                                 variant="border-filled"
+                                icon-name="utility:bug"
+                                onclick={handleDebug}>
+                            </lightning-button-icon>
+                            <lightning-button-icon 
+                                variant="border-filled"
                                 icon-name="utility:jump_to_left"
                                 disabled={viewState.previousDisabled}
                                 onclick={handleJumpLeft}>

@@ -6,7 +6,7 @@ import { Config } from "../config/config";
 import { Params, State } from "../types";
 import clone from "clone";
 import { parseConfig } from "../config/parse";
-import { applyOperation, applyPatch, observe, Observer, Operation } from "fast-json-patch";
+import { applyOperation, applyPatch, compare, observe, Observer, Operation } from "fast-json-patch";
 
 export enum ModelStateType {
     Normal = "normal",
@@ -153,15 +153,11 @@ function applyStateStepTransition(s: ModelStateNormal, forward: boolean): Array<
 
     if (forward) {
         const steps: Array<Operation> = s.config.steps[index].operations; 
-        let state: State = s.params.getState();
-        const changes: Array<Operation> = [];
-        const observer: Observer<unknown> = observe(state, (patches: Array<Operation>) => {
-            changes.push(...patches);
-        })
-        applyPatch(state, steps, false, true);
-        observer.unobserve();
-        s.params.setState(state);
-        return changes; 
+        let state: State = s.params.getState(),
+            copied: State = clone(state);
+        applyPatch(copied, steps, false, true);
+        s.params.setState(copied);
+        return compare(copied, state); 
     }
 
     if (!forward) {
