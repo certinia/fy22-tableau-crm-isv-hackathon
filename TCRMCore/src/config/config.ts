@@ -3,6 +3,7 @@
  */
 
 import { Schema } from "jsonschema";
+import { AddOperation, RemoveOperation, ReplaceOperation, MoveOperation, CopyOperation } from "fast-json-patch";
 
 export type Config = {
     autoplay: boolean;
@@ -12,8 +13,10 @@ export type Config = {
 export type ConfigStep = {
     title: string;
     description: string;
-    operations: Array<any>;
+    operations: Array<ConfigOperation>;
 };
+
+export type ConfigOperation = AddOperation<any> | RemoveOperation | ReplaceOperation<any> | MoveOperation | CopyOperation;
 
 export const ConfigSchema: Schema = {
     id: "/Config",
@@ -38,7 +41,30 @@ export const ConfigSchema: Schema = {
                         items: {
                             type: "object",
                             required: true,
-                            additionalProperties: false
+                            additionalProperties: false,
+                            properties: {
+                                path: { type: "string", required: true, minLength: 1 },
+                                op: { 
+                                    type: "string", 
+                                    required: true, 
+                                    enum: ["add", "remove", "replace", "move", "copy"] 
+                                },
+                                value: {
+                                    type: ["number","string","boolean","object","array", "null"],
+                                }
+                            },
+                            if: {
+                                properties: {
+                                    op: {
+                                        enum: ["add", "replace"]
+                                    }
+                                }
+                            },
+                            then: {
+                                required: [
+                                    "value"
+                                ]
+                            }
                         }
                     } 
                 }
