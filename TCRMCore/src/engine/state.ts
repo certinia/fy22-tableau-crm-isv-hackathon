@@ -8,13 +8,13 @@ import clone from "clone";
 import { parseConfig } from "../config/parse";
 import { applyOperation, applyPatch, observe, Observer, Operation } from "fast-json-patch";
 
-export enum EngineStateType {
+export enum ModelStateType {
     Normal = "normal",
     Error = "error"
 }
 
-export type EngineStateNormal = {
-    type: EngineStateType.Normal;
+export type ModelStateNormal = {
+    type: ModelStateType.Normal;
     params: Params;
     config: Config;
     paused: boolean;
@@ -25,19 +25,19 @@ export type EngineStateNormal = {
     }
 }
 
-export type EngineStateError = {
-    type: EngineStateType.Error;
+export type ModelStateError = {
+    type: ModelStateType.Error;
     params: Params;
     message: string
 }
 
-export type EngineState = EngineStateNormal | EngineStateError;
+export type ModelState = ModelStateNormal | ModelStateError;
 
-export function fromParams(p: Params): EngineState {
+export function fromParams(p: Params): ModelState {
     try {
         const config: Config = parseConfig(p.config);
         return {
-            type: EngineStateType.Normal,
+            type: ModelStateType.Normal,
             params: p,
             config,
             paused: !config.autoplay,
@@ -49,7 +49,7 @@ export function fromParams(p: Params): EngineState {
         };
     } catch (err) {
         return {
-            type: EngineStateType.Error,
+            type: ModelStateType.Error,
             params: p,
             message: err.message
         };
@@ -57,11 +57,11 @@ export function fromParams(p: Params): EngineState {
 
 }
 
-export function playPause(s: EngineState): EngineState {
+export function playPause(s: ModelState): ModelState {
     switch (s.type) {
-        case EngineStateType.Error:
+        case ModelStateType.Error:
             return clone(s);
-        case EngineStateType.Normal:
+        case ModelStateType.Normal:
             return {
                 ...clone(s),
                 paused: !s.paused
@@ -69,13 +69,16 @@ export function playPause(s: EngineState): EngineState {
     }
 }
 
-export function tick(s: EngineState): EngineState {
+export function tick(s: ModelState): ModelState {
     switch (s.type) {
-        case EngineStateType.Error:
+        case ModelStateType.Error:
             return clone(s);
-        case EngineStateType.Normal: {
-            const newState: EngineStateNormal = clone(s);
-            const newStateAfterTick: EngineStateNormal = {
+        case ModelStateType.Normal: {
+            if (s.paused) {
+                return clone(s);
+            }
+            const newState: ModelStateNormal = clone(s);
+            const newStateAfterTick: ModelStateNormal = {
                 ...newState,
                 step: {
                     ...newState.step,
@@ -90,12 +93,12 @@ export function tick(s: EngineState): EngineState {
     }
 }
 
-export function previous(s: EngineState): EngineState {
+export function previous(s: ModelState): ModelState {
     switch (s.type) {
-        case EngineStateType.Error:
+        case ModelStateType.Error:
             return clone(s);
-        case EngineStateType.Normal: {
-            const newState: EngineStateNormal = clone(s),
+        case ModelStateType.Normal: {
+            const newState: ModelStateNormal = clone(s),
                 currentStepIndex: number = newState.step.index;
             let nextStepIndex: number = currentStepIndex - 1;
             if (nextStepIndex < 0) {
@@ -104,7 +107,7 @@ export function previous(s: EngineState): EngineState {
             if (nextStepIndex < currentStepIndex) {
                 applyStateStepTransition(s, false);
             }
-            const resultState: EngineStateNormal = {
+            const resultState: ModelStateNormal = {
                 ...newState,
                 step: {
                     index: nextStepIndex,
@@ -116,12 +119,12 @@ export function previous(s: EngineState): EngineState {
     }
 }
 
-export function next(s: EngineState): EngineState {
+export function next(s: ModelState): ModelState {
     switch (s.type) {
-        case EngineStateType.Error:
+        case ModelStateType.Error:
             return clone(s);
-        case EngineStateType.Normal: {
-            const newState: EngineStateNormal = clone(s),
+        case ModelStateType.Normal: {
+            const newState: ModelStateNormal = clone(s),
                 currentStepIndex: number = newState.step.index;
             let nextStepIndex: number = currentStepIndex + 1;
             if (nextStepIndex > newState.config.steps.length - 1) {
@@ -131,7 +134,7 @@ export function next(s: EngineState): EngineState {
             if (nextStepIndex > currentStepIndex) {
                 newInverses = applyStateStepTransition(s, true);
             }
-            const resultState: EngineStateNormal = {
+            const resultState: ModelStateNormal = {
                 ...newState,
                 paused: nextStepIndex === newState.config.steps.length - 1,
                 inverses: newInverses ? newState.inverses.concat([newInverses]) : newState.inverses,
@@ -145,7 +148,7 @@ export function next(s: EngineState): EngineState {
     }
 }
 
-function applyStateStepTransition(s: EngineStateNormal, forward: boolean): Array<Operation> | null {
+function applyStateStepTransition(s: ModelStateNormal, forward: boolean): Array<Operation> | null {
     const index: number = s.step.index;
 
     if (forward) {

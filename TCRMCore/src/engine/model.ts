@@ -3,11 +3,16 @@
  */
 
 import { Params } from "../types";
-import { EngineState, fromParams, next, playPause, previous, tick } from "./state";
+import { ModelState, fromParams, next, playPause, previous, tick } from "./state";
+import { viewStateFromState } from "./viewState";
 
-class Engine {
+class Model {
 
-    private state: EngineState;
+    private state: ModelState;
+
+    get viewState() {
+        return viewStateFromState(this.state);
+    }
 
     constructor(p: Params) {
         this.state = fromParams(p);
@@ -29,7 +34,6 @@ class Engine {
         this.state = tick(this.state);
     }
 
-
 }
 
-export default Engine;
+export default Model;
