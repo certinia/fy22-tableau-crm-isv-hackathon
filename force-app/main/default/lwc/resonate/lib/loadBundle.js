@@ -5,7 +5,6 @@
 import bundleUrl from '@salesforce/resourceUrl/tcrmCore';
 import { loadScript } from 'lightning/platformResourceLoader';
 
-
 let bundle = null;
 export async function loadBundle(cRef) {
     if(!bundle) {
@@ -13,12 +12,6 @@ export async function loadBundle(cRef) {
         if(!bundle) {
             bundle = window.tcrmCore;
         }
-        return await bundle.createBundle({
-            title: cRef.title,
-            config: cRef.config,
-            getState: cRef.getState.bind(cRef),
-            setState: cRef.setState.bind(cRef)
-        });
+        return bundle;
     }
-
 }

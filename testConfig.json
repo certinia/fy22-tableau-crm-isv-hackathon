@@ -4,5 +4,9 @@
         "title": "A test step",
         "description": "A description",
         "operations": []
+    }, {
+        "title": "A test step 2",
+        "description": "A description 2",
+        "operations": []
     }]
 }

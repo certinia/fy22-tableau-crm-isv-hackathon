@@ -3,7 +3,7 @@
  */
 
 import { Schema } from "jsonschema";
-import { AddOperation, RemoveOperation, ReplaceOperation, MoveOperation, CopyOperation } from "fast-json-patch";
+import { AddOperation, RemoveOperation, ReplaceOperation, MoveOperation, CopyOperation, Operation } from "fast-json-patch";
 
 export type Config = {
     autoplay: boolean;
@@ -13,10 +13,9 @@ export type Config = {
 export type ConfigStep = {
     title: string;
     description: string;
-    operations: Array<ConfigOperation>;
+    operations: Array<Operation>;
+    time: number;
 };
-
-export type ConfigOperation = AddOperation<any> | RemoveOperation | ReplaceOperation<any> | MoveOperation | CopyOperation;
 
 export const ConfigSchema: Schema = {
     id: "/Config",
@@ -36,6 +35,7 @@ export const ConfigSchema: Schema = {
                 properties: {
                     title: { type: "string", required: true, minLength: 1 },
                     description: { type: "string", required: true, minLength: 1 },
+                    time: { type: "number", required: true },
                     operations: {
                         type: "array",
                         required: true,

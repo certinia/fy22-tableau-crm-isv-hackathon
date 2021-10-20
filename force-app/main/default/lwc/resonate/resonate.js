@@ -14,18 +14,20 @@ class Resonate extends LightningElement {
 
     engine;
 
-    @track error = null;
-    @track ready = false;
-    @track state = null;
-
     async connectedCallback() {
         // bundle
-        try {
-            this.engine = (await loadBundle(this)).engine;
-        } catch (err) {
-            this.error = err;
-        }
-        this.ready = true;
+        const bundle = await loadBundle(this),
+            engine = bundle.createEngine({
+                title: cRef.title,
+                config: cRef.config,
+                getState: cRef.getState.bind(cRef),
+                setState: cRef.setState.bind(cRef)
+            });
+        this.engine = engine;
+    }
+
+    get ready() {
+        this.engine != null;
     }
 
     get hasError() {
@@ -36,12 +38,24 @@ class Resonate extends LightningElement {
         return this.error.message;
     }
 
+    get showStepRegion() {
+        return !this.hasError && this.ready;
+    }
+
     get pausePlayIcon() {
         return (this.engine && this.engine.paused) ? "utility:play" : "utility:pause";
     }
 
     get buttonsDisabled() {
         return !this.ready || this.hasError || !this.engine.buttonsEnabled;
+    }
+
+    get stepTitle() {
+        return this.engine.stepTitle;
+    }
+
+    get stepDescription() {
+        return this.engine.stepDescription;
     }
 
     handleRefresh() {

@@ -1,9 +1,6 @@
 /*
  * Copyright (c) 2021 FinancialForce.com, inc. All rights reserved.
  */
-
-import Engine from "./engine/core";
-
  
 export type State = Record<string, unknown>;
 
@@ -17,6 +14,3 @@ export type Params = {
     setState: SetStateFunction
 };
 
-export type Bundle = {
-    engine: Engine
-};

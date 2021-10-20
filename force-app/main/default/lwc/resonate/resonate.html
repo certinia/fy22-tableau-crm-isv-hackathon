@@ -34,13 +34,9 @@
             </div>
             <div class="slds-card__body slds-card__body_inner">
                 <div class="tcrm-in-card">
-                    <template if:false={hasError}>
-                        State: {state}<br/>
-                        <lightning-button
-                            variant="brand"
-                            label="Refresh"
-                            onclick={handleRefresh}>
-                        </lightning-button>
+                    <template if:true={showStepRegion}>
+                        Title: {stepTitle}<br/>
+                        Description: {stepDescription}<br/>
                     </template>
                     <template if:true={hasError}>
                         <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
