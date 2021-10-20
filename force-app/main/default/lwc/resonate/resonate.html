@@ -13,19 +13,19 @@
                             <lightning-button-icon 
                                 variant="border-filled"
                                 icon-name="utility:jump_to_left"
-                                disabled={buttonsDisabled}
+                                disabled={viewState.previousEnabled}
                                 onclick={handleJumpLeft}>
                             </lightning-button-icon>
                             <lightning-button-icon 
                                 variant="border-filled"
                                 icon-name={pausePlayIcon}
-                                disabled={buttonsDisabled}
+                                disabled={viewState.playPauseEnabled}
                                 onclick={handlePausePlay}>
                             </lightning-button-icon>
                             <lightning-button-icon 
                                 variant="border-filled"
                                 icon-name="utility:jump_to_right"
-                                disabled={buttonsDisabled}
+                                disabled={viewState.nextEnabled}
                                 onclick={handleJumpRight}>
                             </lightning-button-icon>
                         </lightning-button-group>
@@ -34,9 +34,9 @@
             </div>
             <div class="slds-card__body slds-card__body_inner">
                 <div class="tcrm-in-card">
-                    <template if:true={showStepRegion}>
-                        Title: {stepTitle}<br/>
-                        Description: {stepDescription}<br/>
+                    <template if:false={hasError}>
+                        Title: {viewState.stepTitle}<br/>
+                        Description: {viewState.stepDescription}<br/>
                     </template>
                     <template if:true={hasError}>
                         <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
@@ -46,7 +46,7 @@
                                     <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
                                 </svg>
                             </span>
-                            {error}
+                            {viewState.error}
                         </div>
                     </template>
                 </div>

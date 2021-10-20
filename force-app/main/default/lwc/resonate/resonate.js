@@ -12,66 +12,53 @@ class Resonate extends LightningElement {
     @api getState;
     @api setState;
 
-    engine;
+    model;
+
+    @track viewState = {
+        error: "",
+        previousEnabled: false,
+        playPauseEnabled: false,
+        nextEnabled: false,
+        stepTitle: "",
+        stepDescription: "", 
+        paused: false,
+        progressPercentage: 0
+    }
 
     async connectedCallback() {
         // bundle
         const bundle = await loadBundle(this),
-            engine = bundle.createEngine({
+            model = bundle.createModel({
                 title: cRef.title,
                 config: cRef.config,
                 getState: cRef.getState.bind(cRef),
                 setState: cRef.setState.bind(cRef)
             });
-        this.engine = engine;
-    }
-
-    get ready() {
-        this.engine != null;
+        this.model = model;
+        this.viewState = model.viewState;
     }
 
     get hasError() {
-        return this.error != null;
-    }
-
-    get error() {
-        return this.error.message;
-    }
-
-    get showStepRegion() {
-        return !this.hasError && this.ready;
+        return this.viewState.error != null;
     }
 
     get pausePlayIcon() {
-        return (this.engine && this.engine.paused) ? "utility:play" : "utility:pause";
-    }
-
-    get buttonsDisabled() {
-        return !this.ready || this.hasError || !this.engine.buttonsEnabled;
-    }
-
-    get stepTitle() {
-        return this.engine.stepTitle;
-    }
-
-    get stepDescription() {
-        return this.engine.stepDescription;
-    }
-
-    handleRefresh() {
-        this.state = JSON.stringify(this.getState());
+        return this.viewState.paused ? "utility:play" : "utility:pause";
     }
 
     handlePausePlay() {
-        this.engine.pausePlay();
+        this.model.playPause();
+        this.viewState = model.viewState;
     }
 
     handleJumpLeft() {
-        this.engine.previous();
+        this.model.previous();
+        this.viewState = model.viewState;
     }
 
     handleJumpRight() {
-        this.engine.next();
+        this.model.next();
+        this.viewState = model.viewState;
     }
 
 }
