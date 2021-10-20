@@ -1,24 +1,24 @@
 {
     "autoplay": false,
     "steps": [{
-        "title": "A test step",
-        "description": "A description",
+        "title": "Demo for Matt",
+        "description": "This dashboard demonstrates a couple of features we want to highlight, starting with applying selection...",
         "time": 5000,
         "operations": [{
             "op": "add", "path": "/state/steps/Name_1/values", "value": [
-                "Sample Account for Entitlements"
+                "Test 1"
             ]
         }]
     }, {
-        "title": "A test step 2",
-        "description": "A description 2",
+        "title": "With some selection",
+        "description": "As you can see, we can select values in a chart as though a user clicked the bar!\nNext is filtering...",
         "time": 5000,
         "operations": [{
             "op": "add", "path": "/state/datasets/Accounts/0/filter/values", "value": "Test 1"
         }]
     }, {
-        "title": "A test step 3",
-        "description": "done !",
+        "title": "With the filter",
+        "description": "And we're done, this is the last step, nothing else to see here.",
         "time": 0,
         "operations": []
     }]

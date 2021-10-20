@@ -40,9 +40,13 @@
             <div class="slds-grid slds-grid_vertical" style="height: 100%;">
                 <div class="slds-col slds-grid slds-grid_vertical">
                     <template if:false={hasError}>
-                        <div class="slds-col">
-                            Title: {viewState.stepTitle}<br/>
-                            Description: {viewState.stepDescription}<br/>
+                        <div class="slds-col slds-grid slds-grid_vertical slds-var-m-around_x-small">
+                            <div class="slds-col slds-var-m-left_large slds-text-heading_small slds-no-flex">
+                                {viewState.stepTitle}
+                            </div>
+                            <div class="slds-col slds-var-m-left_large slds-var-m-top_xx-small">
+                                {viewState.stepDescription}
+                            </div>
                         </div>
                         <template if:false={viewState.paused}>
                             <div class="slds-col slds-no-flex">
