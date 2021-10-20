@@ -15,6 +15,7 @@ class Resonate extends LightningElement {
     engine;
 
     @track error = null;
+    @track ready = false;
     @track state = null;
 
     async connectedCallback() {
@@ -24,8 +25,7 @@ class Resonate extends LightningElement {
         } catch (err) {
             this.error = err;
         }
-        // init
-        this.paused = !this.engine.autoplayEnabled();
+        this.ready = true;
 
     }
 
@@ -33,16 +33,16 @@ class Resonate extends LightningElement {
         return this.error != null;
     }
 
-    get pausePlayIcon() {
-        return this.engine.paused ? "utility:play" : "utility:pause";
-    }
-
     get error() {
         return this.error.message;
     }
 
+    get pausePlayIcon() {
+        return (this.engine && this.engine.paused) ? "utility:play" : "utility:pause";
+    }
+
     get buttonsDisabled() {
-        return !this.engine.buttonsEnabled || this.hasError;
+        return !this.ready || this.hasError || !this.engine.buttonsEnabled;
     }
 
     handleRefresh() {
