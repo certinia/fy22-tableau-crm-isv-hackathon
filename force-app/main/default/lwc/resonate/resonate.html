@@ -5,7 +5,7 @@
                 <header class="slds-media slds-media_center slds-has-flexi-truncate">
                     <div class="slds-media__body">
                         <h2 class="slds-card__header-title">
-                            <span>{title}</span>
+                            <span><template if:true={ready}>{viewState.stepTitle}</template></span>
                         </h2>
                     </div>
                     <div class="slds-no-flex">
@@ -38,34 +38,33 @@
                 </header>
             </div>
             <div class="slds-grid slds-grid_vertical" style="height: 100%;">
-                <div class="slds-col slds-grid slds-grid_vertical">
-                    <template if:false={hasError}>
-                        <div class="slds-col slds-grid slds-grid_vertical slds-var-m-around_x-small">
-                            <div class="slds-col slds-var-m-left_large slds-text-heading_small slds-no-flex">
-                                {viewState.stepTitle}
+                <template if:true={ready}>
+                    <div class="slds-col slds-grid slds-grid_vertical">
+                        <template if:false={hasError}>
+                            <div class="slds-col slds-grid slds-grid_vertical slds-var-m-around_x-small">
+                                <div class="slds-col slds-var-m-left_large slds-text-heading_small">
+                                    {viewState.stepDescription}
+                                </div>
                             </div>
-                            <div class="slds-col slds-var-m-left_large slds-var-m-top_xx-small">
-                                {viewState.stepDescription}
-                            </div>
-                        </div>
-                        <template if:false={viewState.paused}>
-                            <div class="slds-col slds-no-flex">
-                                <lightning-progress-bar value={viewState.progressPercentage} size="small"></lightning-progress-bar>
+                            <template if:false={viewState.paused}>
+                                <div class="slds-col slds-no-flex">
+                                    <lightning-progress-bar value={viewState.progressPercentage} size="small"></lightning-progress-bar>
+                                </div>
+                            </template>
+                        </template>
+                        <template if:true={hasError}>
+                            <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+                                <span class="slds-assistive-text">error</span>
+                                <span class="slds-icon_container slds-icon-utility-error slds-var-m-right_x-small" title="Description of icon when needed">
+                                    <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                                    </svg>
+                                </span>
+                                {viewState.error}
                             </div>
                         </template>
-                    </template>
-                    <template if:true={hasError}>
-                        <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
-                            <span class="slds-assistive-text">error</span>
-                            <span class="slds-icon_container slds-icon-utility-error slds-var-m-right_x-small" title="Description of icon when needed">
-                                <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
-                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
-                                </svg>
-                            </span>
-                            {viewState.error}
-                        </div>
-                    </template>
-                </div>
+                    </div>
+                </template>
             </div>
         </article>        
     </div>

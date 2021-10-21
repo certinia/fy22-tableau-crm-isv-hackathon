@@ -16,6 +16,7 @@ class Resonate extends LightningElement {
 
     cachedState = { mock: "state" };
 
+    @track ready = false;
     @track viewState = {
         error: "",
         previousDisabled: false,
@@ -38,6 +39,7 @@ class Resonate extends LightningElement {
             });
         this.model = model;
         this.viewState = model.viewState;
+        this.ready = true;
         if (!this.isInEditMode()) {
             setInterval(() => this.tick(), 10);
         }
