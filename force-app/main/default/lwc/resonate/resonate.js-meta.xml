@@ -10,8 +10,6 @@
     <targetConfigs>
         <targetConfig targets="analytics__Dashboard">
         <hasStep>false</hasStep>
-        <property name="title" type="String" label="Title" description="Title of the
-        component" required="true" />
         <property name="config" type="String" label="Configuration" description="Component configuration" required="true" />
         </targetConfig>
     </targetConfigs>

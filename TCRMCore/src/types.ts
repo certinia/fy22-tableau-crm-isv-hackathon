@@ -9,7 +9,6 @@ export type SetStateFunction = (s: State) => void;
 
 export type Params = {
     config: string,
-    title: string,
     getState: GetStateFunction,
     setState: SetStateFunction
 };
