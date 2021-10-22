@@ -6,7 +6,6 @@ import { Schema } from "jsonschema";
 import { AddOperation, RemoveOperation, ReplaceOperation, MoveOperation, CopyOperation, Operation } from "fast-json-patch";
 
 export type Config = {
-    autoplay: boolean;
     steps: Array<ConfigStep>;
 };
 
@@ -23,7 +22,6 @@ export const ConfigSchema: Schema = {
 	required: true,
     additionalProperties: false,
 	properties: {
-        autoplay: { type: "boolean", required: true },
         steps: {
             type: "array",
             required: true,

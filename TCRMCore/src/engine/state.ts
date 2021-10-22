@@ -40,7 +40,7 @@ export function fromParams(p: Params): ModelState {
             type: ModelStateType.Normal,
             params: p,
             config,
-            paused: !config.autoplay,
+            paused: !p.autoplay,
             inverses: [],
             step: {
                 index: 0,

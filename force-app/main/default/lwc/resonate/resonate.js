@@ -7,6 +7,7 @@ import { loadBundle } from "./lib/loadBundle";
 
 class Resonate extends LightningElement {
 
+    @api autoplay;
     @api config;
     @api getState;
     @api setState;
@@ -31,6 +32,7 @@ class Resonate extends LightningElement {
         // bundle
         const bundle = await loadBundle(this),
             model = bundle.createModel({
+                autoplay: this.autoplay,
                 config: this.config,
                 getState: this.getStateFromEA.bind(this),
                 setState: this.setStateToEA.bind(this)
