@@ -1,12 +1,11 @@
 {
-    "autoplay": false,
     "steps": [{
         "title": "Demo for Matt",
         "description": "This dashboard demonstrates a couple of features we want to highlight, starting with applying selection...",
         "time": 5000,
         "operations": [{
-            "op": "add", "path": "/state/steps/Name_1/values", "value": [
-                "Test 1"
+            "op": "add", "path": "/state/steps/Industry_1/values", "value": [
+                "Agriculture"
             ]
         }]
     }, {
@@ -18,22 +17,8 @@
         }]
     }, {
         "title": "With the filter",
-        "description": "Dimensions next...",
+        "description": "Done",
         "time": 5000,
-        "operations": [{
-            "op": "replace", "path": "/pageId", "value": "c85c99be-89cd-46a5-8448-5b8f7ea72dd7"
-        }]
-    }, {
-        "title": "With the filter",
-        "description": "Dimensions next...",
-        "time": 5000,
-        "operations": [{
-            "op": "replace", "path": "/pageId", "value": "7a275ce1-6bb4-418a-8746-fc1b81cf230f"
-        }]
-    }, {
-        "title": "With a new dimension",
-        "description": "And we're done, this is the last step, nothing else to see here.",
-        "time": 0,
         "operations": []
     }]
 }
