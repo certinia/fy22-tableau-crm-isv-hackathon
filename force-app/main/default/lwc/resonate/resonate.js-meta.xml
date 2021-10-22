@@ -11,7 +11,7 @@
         <targetConfig targets="analytics__Dashboard">
         <hasStep>false</hasStep>
         <property name="config" type="String" label="Configuration" description="Component configuration" required="true" />
-        <property name="autoplay" type="Boolean" label="Autoplay" description="Play when the dashboard loads" required="true" />
+        <property name="autoplay" type="Boolean" label="Autoplay" description="Play when the dashboard loads" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

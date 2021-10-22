@@ -114,8 +114,19 @@ class Resonate extends LightningElement {
     }
 
     handleDebug() {
-        window.alert(JSON.stringify(this.getState(), null, 2));
+        const stateString = JSON.stringify(this.getState(), null, 2);
+        this.startDownload(stateString);
     }
+
+    startDownload(data) {
+		const blob = new Blob([data], { type: "text/json" });
+		const url = URL.createObjectURL(blob);
+		const downloadElement = document.createElement("a");
+		downloadElement.href = url;
+		downloadElement.target = "_self";
+		downloadElement.download = "state.json";
+		downloadElement.click();
+	}
 
 }
 
