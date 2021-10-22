@@ -12,11 +12,6 @@
                         <lightning-button-group>
                             <lightning-button-icon 
                                 variant="border-filled"
-                                icon-name="utility:bug"
-                                onclick={handleDebug}>
-                            </lightning-button-icon>
-                            <lightning-button-icon 
-                                variant="border-filled"
                                 icon-name="utility:jump_to_left"
                                 disabled={viewState.previousDisabled}
                                 onclick={handleJumpLeft}>
@@ -42,7 +37,7 @@
                     <div class="slds-col slds-grid slds-grid_vertical">
                         <template if:false={hasError}>
                             <div class="slds-col slds-grid slds-grid_vertical slds-var-m-around_x-small">
-                                <div class="slds-col slds-var-m-left_large slds-text-heading_small">
+                                <div class="slds-col slds-var-m-left_large slds-var-m-right_large slds-text-heading_small">
                                     {viewState.stepDescription}
                                 </div>
                             </div>

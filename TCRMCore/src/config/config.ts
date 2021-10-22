@@ -3,7 +3,7 @@
  */
 
 import { Schema } from "jsonschema";
-import { AddOperation, RemoveOperation, ReplaceOperation, MoveOperation, CopyOperation, Operation } from "fast-json-patch";
+import { Operation } from "fast-json-patch";
 
 export type Config = {
     steps: Array<ConfigStep>;
