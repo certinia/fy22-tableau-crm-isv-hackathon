@@ -1,0 +1,3447 @@
+{
+  "name" : "Climate_Change_tp",
+  "label" : "Climate Change",
+  "folder" : {
+    "id" : "${App.Folder.Id}"
+  },
+  "dateVersion" : 1,
+  "mobileDisabled" : false,
+  "xmd" : {
+    "measures" : [
+      {
+        "conditionalFormatting" : {
+          "chartColor" : {
+            "referenceField" : "Average Temperature",
+            "type" : "gradient",
+            "parameters" : {
+              "bins" : [
+                {
+                  "formatValue" : "#FFCD95"
+                },
+                {
+                  "formatValue" : "#B50E03"
+                }
+              ]
+            }
+          }
+        },
+        "field" : "Average_Temperature__1.Average Temperature",
+        "format" : {
+          "delimiters" : {
+            "thousands" : ",",
+            "decimal" : "."
+          },
+          "customFormat" : "[\"#,###.##\",1]"
+        }
+      },
+      {
+        "conditionalFormatting" : {
+          "chartColor" : {
+            "referenceField" : "C",
+            "type" : "multiple",
+            "parameters" : {
+              "bins" : [
+                {
+                  "formatValue" : "#4269E9",
+                  "bin" : "*"
+                },
+                {
+                  "formatValue" : "#B50E03",
+                  "bin" : "0"
+                }
+              ]
+            }
+          }
+        },
+        "field" : "Change_over_time_1.C",
+        "format" : {
+          "delimiters" : { }
+        }
+      },
+      {
+        "conditionalFormatting" : {
+          "chartColor" : {
+            "referenceField" : "Average Temperature",
+            "type" : "static",
+            "parameters" : {
+              "formatValue" : "#1674D9"
+            }
+          }
+        },
+        "field" : "Average_over_time_2.Average Temperature",
+        "format" : {
+          "delimiters" : { }
+        }
+      },
+      {
+        "conditionalFormatting" : {
+          "chartColor" : {
+            "referenceField" : "5 Year Average",
+            "type" : "static",
+            "parameters" : {
+              "formatValue" : "#B50E03"
+            }
+          }
+        },
+        "field" : "Average_over_time_2.5 Year Average",
+        "format" : {
+          "delimiters" : { }
+        }
+      }
+    ],
+    "derivedDimensions" : [ ],
+    "organizations" : [ ],
+    "showDetailsDefaultFields" : [ ],
+    "dates" : [ ],
+    "derivedMeasures" : [ ],
+    "dimensions" : [
+      {
+        "recordDisplayFields" : [ ],
+        "conditionalFormatting" : {
+          "chartColor" : {
+            "referenceField" : "Average Temperature",
+            "type" : "gradient",
+            "parameters" : {
+              "bins" : [
+                {
+                  "formatValue" : "#FFCD95"
+                },
+                {
+                  "formatValue" : "#B50E03"
+                }
+              ]
+            }
+          }
+        },
+        "salesforceActions" : [ ],
+        "field" : "Average_Temperature__1.ALL",
+        "members" : [ ],
+        "customActions" : [ ]
+      },
+      {
+        "recordDisplayFields" : [ ],
+        "conditionalFormatting" : {
+          "chartColor" : {
+            "referenceField" : "C",
+            "type" : "multiple",
+            "parameters" : {
+              "bins" : [
+                {
+                  "formatValue" : "#4269E9",
+                  "bin" : "*"
+                },
+                {
+                  "formatValue" : "#B50E03",
+                  "bin" : "0"
+                }
+              ]
+            }
+          }
+        },
+        "salesforceActions" : [ ],
+        "field" : "Change_over_time_1.ALL",
+        "members" : [ ],
+        "customActions" : [ ]
+      },
+      {
+        "recordDisplayFields" : [ ],
+        "conditionalFormatting" : {
+          "chartColor" : {
+            "referenceField" : "Average Temperature",
+            "type" : "static",
+            "parameters" : {
+              "formatValue" : "#1674D9"
+            }
+          }
+        },
+        "salesforceActions" : [ ],
+        "field" : "Average_over_time_2.ALL",
+        "members" : [ ],
+        "customActions" : [ ]
+      }
+    ]
+  },
+  "state" : {
+    "dataSourceLinks" : [ ],
+    "filters" : [ ],
+    "gridLayouts" : [
+      {
+        "maxWidth" : 1200,
+        "name" : "Default",
+        "numColumns" : 39,
+        "pages" : [
+          {
+            "label" : "Untitled",
+            "name" : "897a4dde-dfaa-4095-8097-70f2ce0185f5",
+            "navigationHidden" : false,
+            "widgets" : [
+              {
+                "colspan" : 37,
+                "column" : 1,
+                "name" : "container_1",
+                "row" : 4,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "backgroundColor" : "rgba(255, 255, 255, 0)",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 7,
+                "column" : 1,
+                "name" : "listselector_1",
+                "row" : 5,
+                "rowspan" : 4,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#C6D3E1",
+                  "borderEdges" : [
+                    "all"
+                  ],
+                  "borderRadius" : 4,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 7,
+                "column" : 9,
+                "name" : "listselector_2",
+                "row" : 5,
+                "rowspan" : 4,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#C6D3E1",
+                  "borderEdges" : [
+                    "all"
+                  ],
+                  "borderRadius" : 4,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 7,
+                "column" : 17,
+                "name" : "listselector_3",
+                "row" : 5,
+                "rowspan" : 4,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#C6D3E1",
+                  "borderEdges" : [
+                    "all"
+                  ],
+                  "borderRadius" : 4,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 7,
+                "column" : 25,
+                "name" : "listselector_4",
+                "row" : 5,
+                "rowspan" : 4,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#C6D3E1",
+                  "borderEdges" : [
+                    "all"
+                  ],
+                  "borderRadius" : 4,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 24,
+                "column" : 14,
+                "name" : "chart_2",
+                "row" : 39,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [
+                    "top"
+                  ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 24,
+                "column" : 14,
+                "name" : "chart_3",
+                "row" : 11,
+                "rowspan" : 28,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+              {
+                "colspan" : 37,
+                "column" : 1,
+                "name" : "chart_6",
+                "row" : 47,
+                "rowspan" : 27,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+              {
+                "colspan" : 9,
+                "column" : 4,
+                "name" : "chart_5",
+                "row" : 27,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#335779",
+                  "borderEdges" : [
+                    "bottom"
+                  ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 3,
+                "column" : 1,
+                "name" : "number_1",
+                "row" : 30,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#335779",
+                  "borderEdges" : [
+                    "bottom"
+                  ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 3,
+                "column" : 1,
+                "name" : "text_1",
+                "row" : 27,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+              {
+                "colspan" : 9,
+                "column" : 4,
+                "name" : "chart_8",
+                "row" : 33,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#335779",
+                  "borderEdges" : [
+                    "bottom"
+                  ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 3,
+                "column" : 1,
+                "name" : "text_2",
+                "row" : 33,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#335779",
+                  "borderEdges" : [
+                    "bottom"
+                  ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 9,
+                "column" : 4,
+                "name" : "chart_9",
+                "row" : 39,
+                "rowspan" : 6,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+              {
+                "colspan" : 3,
+                "column" : 1,
+                "name" : "text_3",
+                "row" : 39,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+              {
+                "colspan" : 3,
+                "column" : 1,
+                "name" : "number_2",
+                "row" : 42,
+                "rowspan" : 3,
+                "widgetStyle" : {
+                  "borderEdges" : [ ]
+                }
+              },
+              {
+                "colspan" : 37,
+                "column" : 1,
+                "name" : "text_4",
+                "row" : 0,
+                "rowspan" : 4,
+                "widgetStyle" : {
+                  "backgroundColor" : "rgba(255, 255, 255, 0)",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 37,
+                "column" : 1,
+                "name" : "text_5",
+                "row" : 76,
+                "rowspan" : 4,
+                "widgetStyle" : {
+                  "backgroundColor" : "rgba(255, 255, 255, 0)",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [ ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 5,
+                "column" : 33,
+                "name" : "listselector_5",
+                "row" : 5,
+                "rowspan" : 4,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#E6ECF2",
+                  "borderEdges" : [
+                    "all"
+                  ],
+                  "borderRadius" : 4,
+                  "borderWidth" : 1
+                }
+              },
+              {
+                "colspan" : 12,
+                "column" : 1,
+                "name" : "component_3",
+                "row" : 11,
+                "rowspan" : 16,
+                "widgetStyle" : {
+                  "backgroundColor" : "#FFFFFF",
+                  "borderColor" : "#335779",
+                  "borderEdges" : [
+                    "bottom"
+                  ],
+                  "borderRadius" : 0,
+                  "borderWidth" : 1
+                }
+              }
+            ]
+          }
+        ],
+        "rowHeight" : "fine",
+        "selectors" : [ ],
+        "style" : {
+          "alignmentX" : "left",
+          "alignmentY" : "top",
+          "backgroundColor" : "#335779",
+          "cellSpacingX" : 0,
+          "cellSpacingY" : 0,
+          "fit" : "original",
+          "gutterColor" : "#335779"
+        },
+        "version" : 1.0
+      }
+    ],
+    "layouts" : [ ],
+    "steps" : {
+      "Average_1" : {
+        "broadcastFacet" : true,
+        "datasets" : [
+          {
+            "name" : "${App.Datasets.daily_temperature_year.Name}"
+          }
+        ],
+        "isGlobal" : false,
+        "label" : "Average_1",
+        "query" : {
+          "query" : {
+            "measures" : [
+              [
+                "avg",
+                "{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}",
+                "A"
+              ],
+              [
+                "max",
+                "{{cell(display_selector_1.selection, 0, \"Measure4__field\").asString()}}",
+                "B"
+              ],
+              [
+                "min",
+                "{{cell(display_selector_1.selection, 0, \"Measure5__field\").asString()}}",
+                "C"
+              ]
+            ],
+            "columns" : [
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "avg",
+                      "{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}"
+                    ]
+                  ]
+                }
+              },
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "max",
+                      "{{cell(display_selector_1.selection, 0, \"Measure4__field\").asString()}}"
+                    ]
+                  ]
+                }
+              },
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "min",
+                      "{{cell(display_selector_1.selection, 0, \"Measure5__field\").asString()}}"
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          "version" : -1.0
+        },
+        "receiveFacetSource" : {
+          "mode" : "exclude",
+          "steps" : [ ]
+        },
+        "selectMode" : "single",
+        "type" : "aggregateflex",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "options" : { },
+          "parameters" : {
+            "borderColor" : "#e0e5ee",
+            "borderWidth" : 1,
+            "cell" : {
+              "backgroundColor" : "#ffffff",
+              "fontColor" : "#16325c",
+              "fontSize" : 12
+            },
+            "columnProperties" : { },
+            "columns" : [ ],
+            "customBulkActions" : [ ],
+            "header" : {
+              "backgroundColor" : "#f4f6f9",
+              "fontColor" : "#16325c",
+              "fontSize" : 12
+            },
+            "innerMajorBorderColor" : "#a8b7c7",
+            "innerMinorBorderColor" : "#e0e5ee",
+            "maxColumnWidth" : 300,
+            "minColumnWidth" : 40,
+            "mode" : "variable",
+            "numberOfLines" : 1,
+            "showActionMenu" : true,
+            "showRowIndexColumn" : false,
+            "totals" : true,
+            "verticalPadding" : 8
+          },
+          "type" : "table"
+        }
+      },
+      "Change_YoY_1" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "label" : "Change YoY",
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.daily_temperature_year.FullyQualifiedName}\";\nq = filter q by 'Year_Number' <= {{cell(Year_2.selection, 0, \"avg_Year_Number\").asString()}};\nresult = group q by 'Year';\nresult = foreach result generate q.'Year' as 'Year', avg(q.'{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}') as 'A';\nresult = group result by 'Year';\nresult = foreach result generate 'Year', first(A) as 'A', sum(A) - sum(sum(A)) over ([-1..-1] partition by all order by ('Year')) as 'B';\nresult = order result by ('Year' asc);\nresult = limit result 2000;",
+        "receiveFacetSource" : {
+          "mode" : "exclude",
+          "steps" : [
+            "Year_2"
+          ]
+        },
+        "selectMode" : "single",
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "fit",
+            "showValues" : false,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : false,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "vbar",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "columnProperties" : { },
+            "columnMap" : {
+              "trellis" : [ ],
+              "dimensionAxis" : [
+                "Year"
+              ],
+              "plots" : [
+                "B"
+              ]
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : false,
+              "showAxis" : false,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : false,
+              "customSize" : "auto",
+              "showAxis" : false,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "Map_Type_1" : {
+        "broadcastFacet" : true,
+        "columns" : {
+          "iso code" : {
+            "dataset" : {
+              "name" : "${App.Datasets.daily_temperature_year.Name}"
+            },
+            "type" : "grouping"
+          },
+          "Display" : {
+            "type" : "string"
+          }
+        },
+        "label" : "Map Type",
+        "selectMode" : "singlerequired",
+        "start" : {
+          "Display" : [
+            "World Countries"
+          ]
+        },
+        "type" : "staticflex",
+        "values" : [
+          {
+            "Display" : "World Countries",
+            "iso code" : "Country_iso_2"
+          },
+          {
+            "Display" : "Europe",
+            "iso code" : "Country_iso_2"
+          },
+          {
+            "Display" : "Southern Europe",
+            "iso code" : "Country_iso_2"
+          },
+          {
+            "Display" : "US States",
+            "iso code" : "Country_Iso"
+          },
+          {
+            "Display" : "Africa",
+            "iso code" : "Country_iso_2"
+          }
+        ]
+      },
+      "Change_over_time_1" : {
+        "broadcastFacet" : true,
+        "datasets" : [
+          {
+            "name" : "${App.Datasets.daily_temperature_year.Name}"
+          }
+        ],
+        "isGlobal" : false,
+        "label" : "Change over time",
+        "query" : {
+          "query" : {
+            "measures" : [
+              [
+                "avg",
+                "{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}",
+                "A"
+              ],
+              [
+                "avg",
+                "{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}",
+                "B"
+              ],
+              [
+                "count",
+                "*",
+                "C"
+              ]
+            ],
+            "columns" : [
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "avg",
+                      "{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}"
+                    ]
+                  ],
+                  "filters" : [
+                    [
+                      "Year",
+                      [
+                        "1980"
+                      ],
+                      "in"
+                    ]
+                  ]
+                }
+              },
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "avg",
+                      "{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}"
+                    ]
+                  ],
+                  "filters" : [
+                    [
+                      "Year",
+                      [
+                        "{{cell(Year_2.selection, 0, \"avg_Year_Number\").asString()}}"
+                      ],
+                      "in"
+                    ]
+                  ]
+                }
+              },
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "count",
+                      "*"
+                    ]
+                  ],
+                  "formula" : "B-A"
+                },
+                "header" : "Change since 1980"
+              }
+            ]
+          },
+          "version" : -1.0
+        },
+        "receiveFacetSource" : {
+          "mode" : "exclude",
+          "steps" : [
+            "Year_2"
+          ]
+        },
+        "selectMode" : "single",
+        "type" : "aggregateflex",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "fit",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : false,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "vbar",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "columnProperties" : { },
+            "columnMap" : {
+              "trellis" : [ ],
+              "dimensionAxis" : [ ],
+              "plots" : [
+                "C"
+              ]
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "Change in ?C since 1980",
+              "customDomain" : {
+                "high" : 4,
+                "low" : 0,
+                "showDomain" : true
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "Max_over_time_1" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "label" : "Max over time",
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.daily_temperature_year.FullyQualifiedName}\";\nq = filter q by 'Year_Number' <= {{cell(Year_2.selection, 0, \"avg_Year_Number\").asString()}};\nresult = group q by 'Year';\nresult = foreach result generate q.'Year' as 'Year', max(q.'{{cell(display_selector_1.selection, 0, \"Measure4__field\").asString()}}') as 'A';\nresult = group result by 'Year';\nresult = foreach result generate 'Year', first(A) as 'Max Temperature';\nresult = order result by ('Year' asc);\nresult = limit result 2000;",
+        "receiveFacetSource" : {
+          "mode" : "exclude",
+          "steps" : [
+            "Year_2"
+          ]
+        },
+        "selectMode" : "single",
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "showPoints" : false,
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : false,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "line",
+            "dashLine" : {
+              "measures" : "",
+              "showDashLine" : false
+            },
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "fillArea" : false,
+            "showActionMenu" : true,
+            "showZero" : false,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : false,
+              "showAxis" : false,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "valueType" : "none",
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : false,
+              "customSize" : "auto",
+              "showAxis" : false,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true,
+            "drawArea" : {
+              "measure" : "",
+              "showDrawArea" : false,
+              "bounding1" : "",
+              "bounding2" : ""
+            }
+          },
+          "type" : "chart"
+        }
+      },
+      "Year_2" : {
+        "broadcastFacet" : true,
+        "datasets" : [
+          {
+            "name" : "${App.Datasets.daily_temperature_year.Name}"
+          }
+        ],
+        "isGlobal" : false,
+        "label" : "Year_Selector",
+        "query" : {
+          "query" : {
+            "measures" : [
+              [
+                "avg",
+                "Year_Number"
+              ]
+            ],
+            "groups" : [
+              "Year"
+            ]
+          },
+          "version" : -1.0
+        },
+        "receiveFacetSource" : {
+          "mode" : "all",
+          "steps" : [ ]
+        },
+        "selectMode" : "singlerequired",
+        "start" : [
+          "2019"
+        ],
+        "type" : "aggregateflex",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "hbar",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "columnMap" : {
+              "trellis" : [ ],
+              "dimensionAxis" : [
+                "Year"
+              ],
+              "plots" : [
+                "avg_Year_Number"
+              ]
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "City_1" : {
+        "broadcastFacet" : true,
+        "datasets" : [
+          {
+            "name" : "${App.Datasets.daily_temperature_year.Name}"
+          }
+        ],
+        "isGlobal" : false,
+        "label" : "City_Selector",
+        "query" : {
+          "query" : {
+            "measures" : [
+              [
+                "count",
+                "*"
+              ]
+            ],
+            "groups" : [
+              "City"
+            ]
+          },
+          "version" : -1.0
+        },
+        "receiveFacetSource" : {
+          "mode" : "all",
+          "steps" : [ ]
+        },
+        "selectMode" : "single",
+        "start" : [ ],
+        "type" : "aggregateflex",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "hbar",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "columnMap" : {
+              "trellis" : [ ],
+              "dimensionAxis" : [
+                "City"
+              ],
+              "plots" : [
+                "count"
+              ]
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "Average_over_time_1" : {
+        "broadcastFacet" : true,
+        "datasets" : [
+          {
+            "name" : "${App.Datasets.daily_temperature_year.Name}"
+          }
+        ],
+        "isGlobal" : false,
+        "label" : "Average over time",
+        "query" : {
+          "query" : {
+            "measures" : [
+              [
+                "avg",
+                "{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}",
+                "A"
+              ],
+              [
+                "max",
+                "{{cell(display_selector_1.selection, 0, \"Measure4__field\").asString()}}",
+                "B"
+              ],
+              [
+                "min",
+                "{{cell(display_selector_1.selection, 0, \"Measure5__field\").asString()}}",
+                "C"
+              ],
+              [
+                "count",
+                "*",
+                "D"
+              ],
+              [
+                "count",
+                "*",
+                "E"
+              ]
+            ],
+            "columns" : [
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "avg",
+                      "{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}"
+                    ]
+                  ],
+                  "groups" : [
+                    "Year"
+                  ]
+                }
+              },
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "max",
+                      "{{cell(display_selector_1.selection, 0, \"Measure4__field\").asString()}}"
+                    ]
+                  ],
+                  "groups" : [
+                    "Year"
+                  ]
+                }
+              },
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "min",
+                      "{{cell(display_selector_1.selection, 0, \"Measure5__field\").asString()}}"
+                    ]
+                  ],
+                  "groups" : [
+                    "Year"
+                  ]
+                }
+              },
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "count",
+                      "*"
+                    ]
+                  ],
+                  "groups" : [
+                    "Year"
+                  ],
+                  "formula" : "round(A,0)-2"
+                },
+                "header" : "Average Range Low"
+              },
+              {
+                "query" : {
+                  "measures" : [
+                    [
+                      "count",
+                      "*"
+                    ]
+                  ],
+                  "groups" : [
+                    "Year"
+                  ],
+                  "formula" : "round(A,0)+2"
+                },
+                "header" : "Average Range High"
+              }
+            ],
+            "groups" : [
+              "Year"
+            ],
+            "order" : [
+              [
+                "Year",
+                {
+                  "ascending" : false
+                }
+              ]
+            ]
+          },
+          "version" : -1.0
+        },
+        "receiveFacetSource" : {
+          "mode" : "exclude",
+          "steps" : [
+            "Year_2"
+          ]
+        },
+        "selectMode" : "single",
+        "start" : [ ],
+        "type" : "aggregateflex",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "options" : { },
+          "parameters" : {
+            "borderColor" : "#e0e5ee",
+            "borderWidth" : 1,
+            "cell" : {
+              "backgroundColor" : "#ffffff",
+              "fontColor" : "#16325c",
+              "fontSize" : 12
+            },
+            "columnProperties" : { },
+            "columns" : [ ],
+            "customBulkActions" : [ ],
+            "header" : {
+              "backgroundColor" : "#f4f6f9",
+              "fontColor" : "#16325c",
+              "fontSize" : 12
+            },
+            "innerMajorBorderColor" : "#a8b7c7",
+            "innerMinorBorderColor" : "#e0e5ee",
+            "maxColumnWidth" : 300,
+            "minColumnWidth" : 40,
+            "mode" : "variable",
+            "numberOfLines" : 1,
+            "pivoted" : false,
+            "showActionMenu" : true,
+            "showRowIndexColumn" : false,
+            "totals" : true,
+            "verticalPadding" : 8
+          },
+          "type" : "table"
+        }
+      },
+      "Average_over_time_2" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "label" : "Average over time",
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.daily_temperature_year.FullyQualifiedName}\";\nq = filter q by 'Year_Number' <= {{cell(Year_2.selection, 0, \"avg_Year_Number\").asString()}};\nresult = group q by 'Year';\nresult = foreach result generate q.'Year' as 'Year', avg(q.'{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}') as 'A';\nresult = group result by 'Year';\nresult = foreach result generate 'Year', first(A) as 'Average Temperature', avg(sum(A)) over ([-5..0] partition by all order by ('Year')) as '5 Year Average';\nresult = order result by ('Year' asc);\nresult = limit result 2000;",
+        "receiveFacetSource" : {
+          "mode" : "exclude",
+          "steps" : [
+            "Year_2"
+          ]
+        },
+        "selectMode" : "single",
+        "start" : [ ],
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "fit",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "showPoints" : true,
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : false,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "bottom-center",
+              "inside" : false
+            },
+            "axisMode" : "sync",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "line",
+            "dashLine" : {
+              "measures" : "",
+              "showDashLine" : false
+            },
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "fillArea" : false,
+            "columnMap" : {
+              "split" : [ ],
+              "trellis" : [ ],
+              "dimensionAxis" : [
+                "Year"
+              ],
+              "plots" : [
+                "Average Temperature",
+                "5 Year Average"
+              ]
+            },
+            "showActionMenu" : true,
+            "showZero" : false,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "valueType" : "compactNumber",
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : false,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "high" : "{{cell(Average_over_time_1.result, 0, \"E\").asString()}}",
+                "low" : "{{cell(Average_over_time_1.result, 20, \"D\").asString()}}",
+                "showDomain" : true
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : false,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true,
+            "drawArea" : {
+              "measure" : "",
+              "showDrawArea" : false,
+              "bounding1" : "",
+              "bounding2" : ""
+            }
+          },
+          "type" : "chart"
+        }
+      },
+      "Country_1" : {
+        "broadcastFacet" : true,
+        "datasets" : [
+          {
+            "name" : "${App.Datasets.daily_temperature_year.Name}"
+          }
+        ],
+        "isGlobal" : false,
+        "label" : "Country_Selector",
+        "query" : {
+          "query" : {
+            "measures" : [
+              [
+                "count",
+                "*"
+              ]
+            ],
+            "groups" : [
+              "Country"
+            ]
+          },
+          "version" : -1.0
+        },
+        "receiveFacetSource" : {
+          "mode" : "all",
+          "steps" : [ ]
+        },
+        "selectMode" : "single",
+        "start" : [ ],
+        "type" : "aggregateflex",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "axisMode" : "multi",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "hbar",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "columnMap" : {
+              "trellis" : [ ],
+              "dimensionAxis" : [
+                "Country"
+              ],
+              "plots" : [
+                "count"
+              ]
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "Average_Temperature__1" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "label" : "Average Temperature Map",
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.daily_temperature_year.FullyQualifiedName}\";\nq = group q by '{{cell(Map_Type_1.selection, 0, \"iso code\").asString()}}';\nq = foreach q generate '{{cell(Map_Type_1.selection, 0, \"iso code\").asString()}}' as '{{cell(Map_Type_1.selection, 0, \"iso code\").asString()}}', avg('{{cell(display_selector_1.selection, 0, \"Measure3__field\").asString()}}') as 'Average';\nq2 = foreach q generate \"Maximum\" as '{{cell(Map_Type_1.selection, 0, \"iso code\").asString()}}', {{cell(display_selector_1.selection, 0, \"high\").asString()}} as 'Average';q3 = foreach q generate \"Minimum\" as '{{cell(Map_Type_1.selection, 0, \"iso code\").asString()}}', {{cell(display_selector_1.selection, 0, \"low\").asString()}} as 'Average';result = union q, q2, q3;result = group result by '{{cell(Map_Type_1.selection, 0, \"iso code\").asString()}}';result = foreach result generate '{{cell(Map_Type_1.selection, 0, \"iso code\").asString()}}' as '{{cell(Map_Type_1.selection, 0, \"iso code\").asString()}}', avg('Average') as 'Average Temperature';result = limit result 2000;",
+        "receiveFacetSource" : {
+          "mode" : "all",
+          "steps" : [ ]
+        },
+        "selectMode" : "single",
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : false,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "bottom-center",
+              "inside" : false
+            },
+            "autoZoom" : true,
+            "axisMode" : "multi",
+            "highColor" : "#1674D9",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : [
+                "avg_Average"
+              ],
+              "showNullValues" : false,
+              "showPercentage" : false,
+              "customText" : "Country\nAverage Temperature:  [avg_Average]",
+              "showDimensions" : true,
+              "showMeasures" : false,
+              "customizeTooltip" : true,
+              "dimensions" : [
+                "Country_Iso"
+              ]
+            },
+            "projectionType" : "Mercator",
+            "lowColor" : "#C5DBF7",
+            "visualizationType" : "choropleth",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "Avg {{cell(display_selector_1.selection, 0, \"Symbol\").asString()}} for {{cell(Year_2.selection, 0, \"Year\").asString()}}",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "map" : "{{cell(Map_Type_1.selection, 0, \"Display\").asString()}}",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "display_selector_1" : {
+        "broadcastFacet" : true,
+        "columns" : {
+          "Maximum" : {
+            "aggregateFunction" : "Measure4__func",
+            "dataset" : {
+              "name" : "${App.Datasets.daily_temperature_year.Name}"
+            },
+            "field" : "Measure4__field",
+            "type" : "aggregate"
+          },
+          "Minimum" : {
+            "aggregateFunction" : "Measure5__func",
+            "dataset" : {
+              "name" : "${App.Datasets.daily_temperature_year.Name}"
+            },
+            "field" : "Measure5__field",
+            "type" : "aggregate"
+          },
+          "high" : {
+            "type" : "number"
+          },
+          "low" : {
+            "type" : "number"
+          },
+          "Symbol" : {
+            "type" : "string"
+          },
+          "Average" : {
+            "aggregateFunction" : "Measure3__func",
+            "dataset" : {
+              "name" : "${App.Datasets.daily_temperature_year.Name}"
+            },
+            "field" : "Measure3__field",
+            "type" : "aggregate"
+          },
+          "Display" : {
+            "type" : "string"
+          }
+        },
+        "label" : "display_selector",
+        "selectMode" : "singlerequired",
+        "start" : {
+          "Display" : [
+            "Celcius"
+          ]
+        },
+        "type" : "staticflex",
+        "values" : [
+          {
+            "Display" : "Celcius",
+            "Symbol" : "deg C",
+            "Measure3__field" : "Average_C",
+            "Measure3__func" : "avg",
+            "Measure4__field" : "Maximum_C",
+            "Measure4__func" : "max",
+            "Measure5__field" : "Minimum_C",
+            "Measure5__func" : "min",
+            "low" : -3,
+            "high" : 32
+          },
+          {
+            "Display" : "Farenheit",
+            "Symbol" : "deg F",
+            "Measure3__field" : "Average_F",
+            "Measure3__func" : "avg",
+            "Measure4__field" : "Maximum_F",
+            "Measure4__func" : "max",
+            "Measure5__field" : "Minimum_F",
+            "Measure5__func" : "min",
+            "low" : 26,
+            "high" : 90
+          }
+        ]
+      },
+      "Clone_of_Average_Tem_1" : {
+        "broadcastFacet" : true,
+        "datasets" : [
+          {
+            "name" : "${App.Datasets.daily_temperature_year.Name}"
+          }
+        ],
+        "isGlobal" : false,
+        "label" : "Average Temperature Map 2",
+        "query" : {
+          "query" : {
+            "measures" : [
+              [
+                "avg",
+                "Average_C"
+              ]
+            ],
+            "groups" : [
+              "Country_iso_2"
+            ]
+          },
+          "version" : -1.0
+        },
+        "receiveFacetSource" : {
+          "mode" : "all",
+          "steps" : [ ]
+        },
+        "selectMode" : "single",
+        "type" : "aggregateflex",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "showValues" : true,
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : false,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "bottom-center",
+              "inside" : false
+            },
+            "autoZoom" : true,
+            "axisMode" : "multi",
+            "highColor" : "#1674D9",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "projectionType" : "Mercator",
+            "lowColor" : "#C5DBF7",
+            "visualizationType" : "choropleth",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "showActionMenu" : true,
+            "measureAxis2" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "measureAxis1" : {
+              "sqrtScale" : false,
+              "showTitle" : true,
+              "showAxis" : true,
+              "title" : "",
+              "customDomain" : {
+                "showDomain" : false
+              }
+            },
+            "theme" : "wave",
+            "map" : "World Countries",
+            "dimensionAxis" : {
+              "showTitle" : true,
+              "customSize" : "auto",
+              "showAxis" : true,
+              "title" : "",
+              "icons" : {
+                "useIcons" : false,
+                "iconProps" : {
+                  "fit" : "cover",
+                  "column" : "",
+                  "type" : "round"
+                }
+              }
+            },
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      },
+      "Clone_of_Average_Tem_2" : {
+        "broadcastFacet" : true,
+        "groups" : [ ],
+        "label" : "Average Temperature Map3",
+        "numbers" : [ ],
+        "query" : "q = load \"${App.Datasets.daily_temperature_year.FullyQualifiedName}\";\nq = group q by 'Country_iso_2';\nq = foreach q generate 'Country_iso_2' as 'Country_iso_2', avg('Average_C') as 'Average';\nq2 = foreach q generate \"Maximum\" as 'Country_iso_2', 35 as 'Average';q3 = foreach q generate \"Minimum\" as 'Country_iso_2', -2 as 'Average';result = union q, q2, q3;result = group result by 'Country_iso_2';result = foreach result generate 'Country_iso_2' as 'Country_iso_2', avg('Average') as 'Average Temperature';result = limit result 2000;",
+        "receiveFacetSource" : {
+          "mode" : "all",
+          "steps" : [ ]
+        },
+        "selectMode" : "single",
+        "strings" : [ ],
+        "type" : "saql",
+        "useGlobal" : true,
+        "visualizationParameters" : {
+          "parameters" : {
+            "autoFitMode" : "keepLabels",
+            "bins" : {
+              "breakpoints" : {
+                "high" : 100,
+                "low" : 0
+              },
+              "bands" : {
+                "high" : {
+                  "color" : "#008000",
+                  "label" : ""
+                },
+                "low" : {
+                  "color" : "#B22222",
+                  "label" : ""
+                },
+                "medium" : {
+                  "color" : "#ffa500",
+                  "label" : ""
+                }
+              }
+            },
+            "autoZoom" : false,
+            "legend" : {
+              "descOrder" : false,
+              "showHeader" : true,
+              "show" : true,
+              "customSize" : "auto",
+              "position" : "right-top",
+              "inside" : false
+            },
+            "highColor" : "#1674D9",
+            "projectionType" : "Mercator",
+            "lowColor" : "#C5DBF7",
+            "tooltip" : {
+              "showBinLabel" : true,
+              "measures" : "",
+              "showNullValues" : true,
+              "showPercentage" : true,
+              "showDimensions" : true,
+              "showMeasures" : true,
+              "customizeTooltip" : false,
+              "dimensions" : ""
+            },
+            "visualizationType" : "choropleth",
+            "title" : {
+              "fontSize" : 14,
+              "subtitleFontSize" : 11,
+              "label" : "",
+              "align" : "center",
+              "subtitleLabel" : ""
+            },
+            "binValues" : false,
+            "trellis" : {
+              "flipLabels" : false,
+              "showGridLines" : true,
+              "size" : [
+                100,
+                100
+              ],
+              "enable" : false,
+              "type" : "x",
+              "chartsPerLine" : 4
+            },
+            "showActionMenu" : true,
+            "theme" : "wave",
+            "map" : "World Countries",
+            "applyConditionalFormatting" : true
+          },
+          "type" : "chart"
+        }
+      }
+    },
+    "widgetStyle" : {
+      "backgroundColor" : "#FFFFFF",
+      "borderColor" : "#E6ECF2",
+      "borderEdges" : [ ],
+      "borderRadius" : 0,
+      "borderWidth" : 1
+    },
+    "widgets" : {
+      "chart_42" : {
+        "parameters" : {
+          "autoFitMode" : "keepLabels",
+          "showValues" : true,
+          "bins" : {
+            "breakpoints" : {
+              "high" : 100,
+              "low" : 0
+            },
+            "bands" : {
+              "high" : {
+                "color" : "#008000",
+                "label" : ""
+              },
+              "low" : {
+                "color" : "#B22222",
+                "label" : ""
+              },
+              "medium" : {
+                "color" : "#ffa500",
+                "label" : ""
+              }
+            }
+          },
+          "legend" : {
+            "descOrder" : false,
+            "showHeader" : false,
+            "show" : true,
+            "customSize" : "auto",
+            "position" : "bottom-center",
+            "inside" : false
+          },
+          "autoZoom" : true,
+          "axisMode" : "multi",
+          "highColor" : "#1674D9",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : "",
+            "showNullValues" : true,
+            "showPercentage" : true,
+            "showDimensions" : true,
+            "showMeasures" : true,
+            "customizeTooltip" : false,
+            "dimensions" : ""
+          },
+          "projectionType" : "Mercator",
+          "lowColor" : "#C5DBF7",
+          "visualizationType" : "choropleth",
+          "exploreLink" : true,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "binValues" : false,
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+              100,
+              100
+            ],
+            "enable" : false,
+            "type" : "x",
+            "chartsPerLine" : 4
+          },
+          "showActionMenu" : true,
+          "measureAxis2" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "measureAxis1" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "theme" : "dark",
+          "step" : "Clone_of_Average_Tem_1",
+          "map" : "World Countries",
+          "dimensionAxis" : {
+            "showTitle" : true,
+            "customSize" : "auto",
+            "showAxis" : true,
+            "title" : "",
+            "icons" : {
+              "useIcons" : false,
+              "iconProps" : {
+                "fit" : "cover",
+                "column" : "",
+                "type" : "round"
+              }
+            }
+          },
+          "applyConditionalFormatting" : true
+        },
+        "type" : "chart"
+      },
+      "listselector_3" : {
+        "parameters" : {
+          "compact" : false,
+          "displayMode" : "filter",
+          "exploreLink" : false,
+          "filterStyle" : {
+            "titleColor" : "#54698D",
+            "valueColor" : "#16325C"
+          },
+          "instant" : true,
+          "measureField" : "none",
+          "showActionMenu" : false,
+          "step" : "City_1",
+          "title" : "City"
+        },
+        "type" : "listselector"
+      },
+      "listselector_2" : {
+        "parameters" : {
+          "compact" : false,
+          "displayMode" : "filter",
+          "exploreLink" : false,
+          "filterStyle" : {
+            "titleColor" : "#54698D",
+            "valueColor" : "#16325C"
+          },
+          "instant" : true,
+          "measureField" : "none",
+          "showActionMenu" : false,
+          "step" : "Country_1",
+          "title" : "Country"
+        },
+        "type" : "listselector"
+      },
+      "text_1" : {
+        "parameters" : {
+          "content" : {
+            "richTextContent" : [
+              {
+                "attributes" : {
+                  "size" : "14px"
+                },
+                "insert" : "Avg {{cell(display_selector_1.selection, 0, \"Symbol\").asString()}}"
+              },
+              {
+                "attributes" : {
+                  "align" : "center"
+                },
+                "insert" : "\n"
+              }
+            ]
+          },
+          "showActionMenu" : true
+        },
+        "type" : "text"
+      },
+      "listselector_5" : {
+        "parameters" : {
+          "compact" : false,
+          "displayMode" : "filter",
+          "exploreLink" : false,
+          "filterStyle" : {
+            "titleColor" : "#54698D",
+            "valueColor" : "#16325C"
+          },
+          "instant" : true,
+          "measureField" : "none",
+          "showActionMenu" : true,
+          "step" : "display_selector_1",
+          "title" : "Display"
+        },
+        "type" : "listselector"
+      },
+      "listselector_4" : {
+        "parameters" : {
+          "compact" : false,
+          "displayMode" : "filter",
+          "exploreLink" : false,
+          "filterStyle" : {
+            "titleColor" : "#54698D",
+            "valueColor" : "#16325C"
+          },
+          "instant" : true,
+          "showActionMenu" : false,
+          "step" : "Map_Type_1",
+          "title" : "Map Type"
+        },
+        "type" : "listselector"
+      },
+      "component_3" : {
+        "parameters" : {
+          "attributes" : {
+            "config" : "{     \"steps\": [     {         \"title\": \"Over time\",         \"description\": \"This dashboard will tell you the story of climate change over time and how the temperatures have changed over the last 40 years.\",         \"time\": 3000,         \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1980\"             ]         }]     },      {         \"title\": \"1980\",             \"description\": \"World Climate Research Programme launched to coordinate international research.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1981\"             ]         }]     },     {         \"title\": \"1981\",             \"description\": \"Strong global warming since mid-1970s is reported, with 1981 the warmest year on record.\",           \"time\": 5000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1982\"             ]         }]     },     {         \"title\": \"1983\",             \"description\": \"Reports from US National Academy of Sciences and Environmental Protection Agency spark conflict greenhouse warming becomes a factor in mainstream politics.\",           \"time\": 5000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1984\"             ]         }]     },     {         \"title\": \"1985\",             \"description\": \"Ramanathan and collaborators announce that global warming may come twice as fast as expected, from rise of methane and other trace greenhouse gases.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1986\"             ]         }]     },     {         \"title\": \"1986\",             \"description\": \"Meltdown of reactor at Chernobyl (Soviet Union) cripples plans to replace fossil fuels with nuclear power.\",           \"time\": 5000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1987\"             ]         }]     },     {         \"title\": \"1988\",             \"description\": \"News media coverage of global warming leaps upward following record heat and droughts. UN launched its Intergovernmental Panel on Climate Change (IPCC).\",           \"time\": 6000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1989\"             ]         }]     },     {         \"title\": \"1990\",             \"description\": \"California Energy Comission predicted that the droughts, heatwaves, and wildfires they had experienced were likely to hit the state with more frequency in the years to come.\",           \"time\": 5000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1991\"             ]         }]     },     {         \"title\": \"1992\",             \"description\": \"The Rio Earth Summit — an international conference on sustainable development established a set of principles for improving and protecting the environment adopted by 178 countries.\",           \"time\": 5000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1993\"             ]         }]     },     {         \"title\": \"1995\",             \"description\": \"Second IPCC report detects signature of human-caused greenhouse effect warming, declares that serious warming is likely in the coming century.\",           \"time\": 5000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1996\"             ]         }]     },     {         \"title\": \"1997\",             \"description\": \"Toyota introduces Prius in Japan, first mass-market electric hybrid car swift progress in large wind turbines, solar electricity, and other energy alternatives.\",           \"time\": 5000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"1998\"             ]         }]     },     {         \"title\": \"1999\",             \"description\": \"Global Climate Coalition dissolves as many corporations grapple with threat of warming, but oil lobby convinces US administration to ignore the problem.\",           \"time\": 5000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2000\"             ]         }]     },     {         \"title\": \"2001\",             \"description\": \"Warming observed in ocean basins match with computer models gives a clear signature of greenhouse effect warming.\",           \"time\": 5000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2002\"             ]         }]     },     {         \"title\": \"2003\",             \"description\": \"Numerous observations raise concern that collapse of ice sheets (West Antarctica, Greenland) can raise sea level faster than most had believed. \",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2004\"             ]         }]     },     {         \"title\": \"2005\",             \"description\": \"Hurricane Katrina and other major tropical storms spur debate over impact of global warming on storm intensity.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2006\"             ]         }]     },     {         \"title\": \"2006\",             \"description\": \"China overtakes the United States as the world’s biggest emitter of CO2.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2007\"             ]         }]     },     {         \"title\": \"2007\",             \"description\": \"China overtakes the United States as the world’s biggest emitter of CO2.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2008\"             ]         }]     },     {         \"title\": \"2008\",             \"description\": \"Climate scientists (although not the public) recognize that even if all greenhouse gas emissions could be halted immediately, global warming will remain for millennia.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2009\"             ]         }]     },     {         \"title\": \"2009\",             \"description\": \"Climate scientists (although not the public) recognize that even if all greenhouse gas emissions could be halted immediately, global warming will remain for millennia.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2010\"             ]         }]     },     {         \"title\": \"2010\",             \"description\": \"Climate scientists (although not the public) recognize that even if all greenhouse gas emissions could be halted immediately, global warming will remain for millennia.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2011\"             ]         }]     },     {         \"title\": \"2011\",             \"description\": \"Reaction to nuclear reactor disaster at Fukushima (Japan) ends hopes for a renaissance of nuclear power.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2012\"             ]         }]     },     {         \"title\": \"2012\",             \"description\": \"Reaction to nuclear reactor disaster at Fukushima (Japan) ends hopes for a renaissance of nuclear power.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2013\"             ]         }]     },     {         \"title\": \"2013\",             \"description\": \"An apparent pause or hiatus in global warming of the atmosphere since 1998, publicized by skeptics, is explained the world is still warming (as following years would confirm).\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2014\"             ]         }]     },     {         \"title\": \"2014\",             \"description\": \"An apparent pause or hiatus in global warming of the atmosphere since 1998, publicized by skeptics, is explained the world is still warming (as following years would confirm).\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2015\"             ]         }]     },     {         \"title\": \"2015\",             \"description\": \"Researchers find collapse of West Antarctic ice sheet may be irreversible, bringing meters of sea-level rise over future centuries.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2016\"             ]         }]     },     {         \"title\": \"2016\",             \"description\": \"Researchers find collapse of West Antarctic ice sheet may be irreversible, bringing meters of sea-level rise over future centuries.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2017\"             ]         }]     },     {         \"title\": \"2017\",             \"description\": \"Researchers find collapse of West Antarctic ice sheet may be irreversible, bringing meters of sea-level rise over future centuries.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2018\"             ]         }]     },     {         \"title\": \"2018\",             \"description\": \"IPCC reported the world only had 12 years left to limit climate catastrophe before its consequences became irreversible.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2019\"             ]         }]     },     {         \"title\": \"2019\",             \"description\": \"IPCC that reported the world only had 12 years left to limit climate catastrophe before its consequences became irreversible.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2020\"             ]         }]     },     {         \"title\": \"2020\",             \"description\": \"Mean global temperature is the warmest in tens of thousands of years.\",           \"time\": 3000,            \"operations\": [{             \"op\": \"add\", \"path\": \"/state/steps/Year_2/values\", \"value\": [                 \"2020\"             ]         }]     },     {         \"title\": \"Act now\",         \"description\": \"If we dont act soon, things will only get worse.\",         \"time\": 0,         \"operations\": []     }] }",
+            "autoplay" : false
+          },
+          "source" : {
+            "name" : "resonate",
+            "namespace" : "c",
+            "type" : "lightningcomponent"
+          }
+        },
+        "type" : "component"
+      },
+      "container_1" : {
+        "parameters" : {
+          "alignmentX" : "left",
+          "alignmentY" : "top",
+          "fit" : "original"
+        },
+        "type" : "container"
+      },
+      "number_2" : {
+        "parameters" : {
+          "compact" : false,
+          "exploreLink" : true,
+          "measureField" : "B",
+          "numberColor" : "#091A3E",
+          "numberSize" : 14,
+          "showActionMenu" : false,
+          "step" : "Average_1",
+          "textAlignment" : "center",
+          "title" : "",
+          "titleColor" : "#091A3E",
+          "titleSize" : 16,
+          "tooltip" : {
+            "customizeTooltip" : false
+          }
+        },
+        "type" : "number"
+      },
+      "number_1" : {
+        "parameters" : {
+          "compact" : false,
+          "exploreLink" : true,
+          "measureField" : "A",
+          "numberColor" : "#091A3E",
+          "numberSize" : 14,
+          "showActionMenu" : true,
+          "step" : "Average_1",
+          "textAlignment" : "center",
+          "title" : "",
+          "titleColor" : "#091A3E",
+          "titleSize" : 14,
+          "tooltip" : {
+            "customizeTooltip" : false
+          }
+        },
+        "type" : "number"
+      },
+      "chart_9" : {
+        "parameters" : {
+          "autoFitMode" : "keepLabels",
+          "showValues" : true,
+          "bins" : {
+            "breakpoints" : {
+              "high" : 100,
+              "low" : 0
+            },
+            "bands" : {
+              "high" : {
+                "color" : "#008000",
+                "label" : ""
+              },
+              "low" : {
+                "color" : "#B22222",
+                "label" : ""
+              },
+              "medium" : {
+                "color" : "#ffa500",
+                "label" : ""
+              }
+            }
+          },
+          "showPoints" : false,
+          "legend" : {
+            "descOrder" : false,
+            "showHeader" : true,
+            "show" : false,
+            "customSize" : "auto",
+            "position" : "right-top",
+            "inside" : false
+          },
+          "axisMode" : "multi",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : "",
+            "showNullValues" : true,
+            "showPercentage" : true,
+            "showDimensions" : true,
+            "showMeasures" : true,
+            "customizeTooltip" : false,
+            "dimensions" : ""
+          },
+          "visualizationType" : "line",
+          "dashLine" : {
+            "measures" : "",
+            "showDashLine" : false
+          },
+          "exploreLink" : true,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "binValues" : false,
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+              100,
+              100
+            ],
+            "enable" : false,
+            "type" : "x",
+            "chartsPerLine" : 4
+          },
+          "fillArea" : false,
+          "showActionMenu" : true,
+          "showZero" : false,
+          "measureAxis2" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "measureAxis1" : {
+            "sqrtScale" : false,
+            "showTitle" : false,
+            "showAxis" : false,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "valueType" : "none",
+          "theme" : "light",
+          "step" : "Max_over_time_1",
+          "dimensionAxis" : {
+            "showTitle" : false,
+            "customSize" : "auto",
+            "showAxis" : false,
+            "title" : "",
+            "icons" : {
+              "useIcons" : false,
+              "iconProps" : {
+                "fit" : "cover",
+                "column" : "",
+                "type" : "round"
+              }
+            }
+          },
+          "applyConditionalFormatting" : true,
+          "drawArea" : {
+            "measure" : "",
+            "showDrawArea" : false,
+            "bounding1" : "",
+            "bounding2" : ""
+          }
+        },
+        "type" : "chart"
+      },
+      "chart_6" : {
+        "parameters" : {
+          "showValues" : true,
+          "showPoints" : true,
+          "legend" : {
+            "descOrder" : false,
+            "showHeader" : false,
+            "show" : true,
+            "customSize" : "auto",
+            "position" : "bottom-center",
+            "inside" : false
+          },
+          "axisMode" : "sync",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : "",
+            "showNullValues" : true,
+            "showPercentage" : true,
+            "showDimensions" : true,
+            "showMeasures" : true,
+            "customizeTooltip" : false,
+            "dimensions" : ""
+          },
+          "visualizationType" : "line",
+          "exploreLink" : true,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "Avg {{cell(display_selector_1.selection, 0, \"Symbol\").asString()}} between 1980 and {{cell(Year_2.selection, 0, \"Year\").asString()}}",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "binValues" : false,
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+              100,
+              100
+            ],
+            "enable" : false,
+            "type" : "x",
+            "chartsPerLine" : 4
+          },
+          "showZero" : false,
+          "valueType" : "compactNumber",
+          "theme" : "light",
+          "dimensionAxis" : {
+            "showTitle" : false,
+            "customSize" : "auto",
+            "showAxis" : true,
+            "title" : "",
+            "icons" : {
+              "useIcons" : false,
+              "iconProps" : {
+                "fit" : "cover",
+                "column" : "",
+                "type" : "round"
+              }
+            }
+          },
+          "applyConditionalFormatting" : true,
+          "drawArea" : {
+            "measure" : "",
+            "showDrawArea" : false,
+            "bounding1" : "",
+            "bounding2" : ""
+          },
+          "autoFitMode" : "fit",
+          "bins" : {
+            "breakpoints" : {
+              "high" : 100,
+              "low" : 0
+            },
+            "bands" : {
+              "high" : {
+                "color" : "#008000",
+                "label" : ""
+              },
+              "low" : {
+                "color" : "#B22222",
+                "label" : ""
+              },
+              "medium" : {
+                "color" : "#ffa500",
+                "label" : ""
+              }
+            }
+          },
+          "dashLine" : {
+            "measures" : "",
+            "showDashLine" : false
+          },
+          "fillArea" : false,
+          "columnMap" : {
+            "split" : [ ],
+            "trellis" : [ ],
+            "dimensionAxis" : [
+              "Year"
+            ],
+            "plots" : [
+              "Average Temperature",
+              "5 Year Average"
+            ]
+          },
+          "showActionMenu" : true,
+          "measureAxis2" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "measureAxis1" : {
+            "sqrtScale" : false,
+            "showTitle" : false,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "high" : "{{cell(Average_over_time_1.result, 0, \"E\").asString()}}",
+              "low" : "{{cell(Average_over_time_1.result, 20, \"D\").asString()}}",
+              "showDomain" : false
+            }
+          },
+          "step" : "Average_over_time_2"
+        },
+        "type" : "chart"
+      },
+      "text_3" : {
+        "parameters" : {
+          "content" : {
+            "richTextContent" : [
+              {
+                "attributes" : {
+                  "size" : "14px"
+                },
+                "insert" : "Max {{cell(display_selector_1.selection, 0, \"Symbol\").asString()}}"
+              },
+              {
+                "attributes" : {
+                  "align" : "center"
+                },
+                "insert" : "\n"
+              }
+            ]
+          },
+          "showActionMenu" : true
+        },
+        "type" : "text"
+      },
+      "chart_5" : {
+        "parameters" : {
+          "showValues" : true,
+          "showPoints" : false,
+          "legend" : {
+            "descOrder" : false,
+            "showHeader" : false,
+            "show" : false,
+            "customSize" : "auto",
+            "position" : "bottom-center",
+            "inside" : false
+          },
+          "axisMode" : "sync",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : "",
+            "showNullValues" : true,
+            "showPercentage" : true,
+            "showDimensions" : true,
+            "showMeasures" : true,
+            "customizeTooltip" : false,
+            "dimensions" : ""
+          },
+          "visualizationType" : "line",
+          "exploreLink" : true,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "binValues" : false,
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+              100,
+              100
+            ],
+            "enable" : false,
+            "type" : "x",
+            "chartsPerLine" : 4
+          },
+          "showZero" : false,
+          "valueType" : "none",
+          "theme" : "light",
+          "dimensionAxis" : {
+            "showTitle" : false,
+            "customSize" : "auto",
+            "showAxis" : false,
+            "title" : "",
+            "icons" : {
+              "useIcons" : false,
+              "iconProps" : {
+                "fit" : "cover",
+                "column" : "",
+                "type" : "round"
+              }
+            }
+          },
+          "applyConditionalFormatting" : true,
+          "drawArea" : {
+            "measure" : "",
+            "showDrawArea" : false,
+            "bounding1" : "",
+            "bounding2" : ""
+          },
+          "autoFitMode" : "fit",
+          "bins" : {
+            "breakpoints" : {
+              "high" : 100,
+              "low" : 0
+            },
+            "bands" : {
+              "high" : {
+                "color" : "#008000",
+                "label" : ""
+              },
+              "low" : {
+                "color" : "#B22222",
+                "label" : ""
+              },
+              "medium" : {
+                "color" : "#ffa500",
+                "label" : ""
+              }
+            }
+          },
+          "dashLine" : {
+            "measures" : "",
+            "showDashLine" : false
+          },
+          "fillArea" : false,
+          "columnMap" : {
+            "split" : [ ],
+            "trellis" : [ ],
+            "dimensionAxis" : [
+              "Year"
+            ],
+            "plots" : [
+              "Average Temperature"
+            ]
+          },
+          "showActionMenu" : true,
+          "measureAxis2" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "measureAxis1" : {
+            "sqrtScale" : false,
+            "showTitle" : false,
+            "showAxis" : false,
+            "title" : "",
+            "customDomain" : {
+              "high" : "{{cell(Average_over_time_1.result, 0, \"E\").asString()}}",
+              "low" : "{{cell(Average_over_time_1.result, 20, \"D\").asString()}}",
+              "showDomain" : false
+            }
+          },
+          "step" : "Average_over_time_2"
+        },
+        "type" : "chart"
+      },
+      "text_2" : {
+        "parameters" : {
+          "content" : {
+            "richTextContent" : [
+              {
+                "attributes" : {
+                  "size" : "14px"
+                },
+                "insert" : "{{cell(display_selector_1.selection, 0, \"Symbol\").asString()}} Change"
+              },
+              {
+                "attributes" : {
+                  "align" : "center"
+                },
+                "insert" : "\n"
+              },
+              {
+                "attributes" : {
+                  "size" : "14px"
+                },
+                "insert" : "YoY"
+              },
+              {
+                "attributes" : {
+                  "align" : "center"
+                },
+                "insert" : "\n"
+              }
+            ]
+          },
+          "showActionMenu" : true
+        },
+        "type" : "text"
+      },
+      "listselector_1" : {
+        "parameters" : {
+          "compact" : false,
+          "displayMode" : "filter",
+          "exploreLink" : false,
+          "filterStyle" : {
+            "titleColor" : "#54698D",
+            "valueColor" : "#16325C"
+          },
+          "instant" : true,
+          "measureField" : "none",
+          "showActionMenu" : false,
+          "step" : "Year_2",
+          "title" : "Year"
+        },
+        "type" : "listselector"
+      },
+      "chart_8" : {
+        "parameters" : {
+          "autoFitMode" : "fit",
+          "showPoints" : false,
+          "legend" : {
+            "descOrder" : false,
+            "showHeader" : true,
+            "show" : false,
+            "customSize" : "auto",
+            "position" : "right-top",
+            "inside" : false
+          },
+          "axisMode" : "multi",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : "",
+            "showNullValues" : true,
+            "showPercentage" : true,
+            "showDimensions" : true,
+            "showMeasures" : true,
+            "customizeTooltip" : false,
+            "dimensions" : ""
+          },
+          "visualizationType" : "line",
+          "dashLine" : {
+            "measures" : "",
+            "showDashLine" : false
+          },
+          "exploreLink" : true,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+              100,
+              100
+            ],
+            "enable" : false,
+            "type" : "x",
+            "chartsPerLine" : 4
+          },
+          "columnProperties" : { },
+          "columnMap" : {
+            "split" : [ ],
+            "trellis" : [ ],
+            "dimensionAxis" : [
+              "Year"
+            ],
+            "plots" : [
+              "B"
+            ]
+          },
+          "fillArea" : false,
+          "showActionMenu" : true,
+          "showZero" : false,
+          "measureAxis2" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "measureAxis1" : {
+            "sqrtScale" : false,
+            "showTitle" : false,
+            "showAxis" : false,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "valueType" : "none",
+          "theme" : "light",
+          "step" : "Change_YoY_1",
+          "dimensionAxis" : {
+            "showTitle" : false,
+            "customSize" : "auto",
+            "showAxis" : false,
+            "title" : "",
+            "icons" : {
+              "useIcons" : false,
+              "iconProps" : {
+                "fit" : "cover",
+                "column" : "",
+                "type" : "round"
+              }
+            }
+          },
+          "applyConditionalFormatting" : true,
+          "drawArea" : {
+            "measure" : "",
+            "showDrawArea" : false,
+            "bounding1" : "",
+            "bounding2" : ""
+          }
+        },
+        "type" : "chart"
+      },
+      "text_5" : {
+        "parameters" : {
+          "content" : {
+            "richTextContent" : [
+              {
+                "attributes" : {
+                  "size" : "12px",
+                  "color" : "#ffffff"
+                },
+                "insert" : "Daily temperature data from ERA5 reanalysis data from Copernicus Climate Service. https://cds.climate.copernicus.eu"
+              },
+              {
+                "attributes" : {
+                  "align" : "center"
+                },
+                "insert" : "\n"
+              },
+              {
+                "attributes" : {
+                  "align" : "left"
+                },
+                "insert" : "\n"
+              }
+            ]
+          },
+          "showActionMenu" : true
+        },
+        "type" : "text"
+      },
+      "text_4" : {
+        "parameters" : {
+          "content" : {
+            "richTextContent" : [
+              {
+                "attributes" : {
+                  "color" : "#ffffff",
+                  "size" : "32px"
+                },
+                "insert" : "Climate Change"
+              },
+              {
+                "attributes" : {
+                  "color" : "#ffffff",
+                  "size" : "18px"
+                },
+                "insert" : " - "
+              },
+              {
+                "attributes" : {
+                  "color" : "#ffffff",
+                  "size" : "18px",
+                  "underline" : true
+                },
+                "insert" : "See"
+              },
+              {
+                "attributes" : {
+                  "color" : "#ffffff",
+                  "size" : "18px"
+                },
+                "insert" : " how temperatures are changing through TCRM"
+              },
+              {
+                "attributes" : {
+                  "align" : "center"
+                },
+                "insert" : "\n"
+              }
+            ]
+          },
+          "showActionMenu" : true
+        },
+        "type" : "text"
+      },
+      "chart_2" : {
+        "parameters" : {
+          "autoFitMode" : "fit",
+          "showValues" : true,
+          "bins" : {
+            "breakpoints" : {
+              "high" : 100,
+              "low" : 0
+            },
+            "bands" : {
+              "high" : {
+                "color" : "#008000",
+                "label" : ""
+              },
+              "low" : {
+                "color" : "#B22222",
+                "label" : ""
+              },
+              "medium" : {
+                "color" : "#ffa500",
+                "label" : ""
+              }
+            }
+          },
+          "legend" : {
+            "descOrder" : false,
+            "showHeader" : true,
+            "show" : false,
+            "customSize" : "auto",
+            "position" : "right-top",
+            "inside" : false
+          },
+          "axisMode" : "multi",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : "",
+            "showNullValues" : true,
+            "showPercentage" : true,
+            "showDimensions" : true,
+            "showMeasures" : true,
+            "customizeTooltip" : false,
+            "dimensions" : ""
+          },
+          "visualizationType" : "hbar",
+          "exploreLink" : true,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "binValues" : false,
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+              100,
+              100
+            ],
+            "enable" : false,
+            "type" : "x",
+            "chartsPerLine" : 4
+          },
+          "columnProperties" : { },
+          "columnMap" : {
+            "trellis" : [ ],
+            "dimensionAxis" : [ ],
+            "plots" : [
+              "C"
+            ]
+          },
+          "showActionMenu" : true,
+          "measureAxis2" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "measureAxis1" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : false,
+            "title" : "Change in {{cell(display_selector_1.selection, 0, \"Symbol\").asString()}} since 1980",
+            "customDomain" : {
+              "high" : 4,
+              "low" : -4,
+              "showDomain" : true
+            }
+          },
+          "theme" : "wave",
+          "step" : "Change_over_time_1",
+          "dimensionAxis" : {
+            "showTitle" : true,
+            "customSize" : "auto",
+            "showAxis" : true,
+            "title" : "",
+            "icons" : {
+              "useIcons" : false,
+              "iconProps" : {
+                "fit" : "cover",
+                "column" : "",
+                "type" : "round"
+              }
+            }
+          },
+          "applyConditionalFormatting" : true
+        },
+        "type" : "chart"
+      },
+      "chart_1" : {
+        "parameters" : {
+          "autoFitMode" : "keepLabels",
+          "bins" : {
+            "breakpoints" : {
+              "high" : 100,
+              "low" : 0
+            },
+            "bands" : {
+              "high" : {
+                "color" : "#008000",
+                "label" : ""
+              },
+              "low" : {
+                "color" : "#B22222",
+                "label" : ""
+              },
+              "medium" : {
+                "color" : "#ffa500",
+                "label" : ""
+              }
+            }
+          },
+          "autoZoom" : false,
+          "legend" : {
+            "descOrder" : false,
+            "showHeader" : true,
+            "show" : true,
+            "customSize" : "auto",
+            "position" : "right-top",
+            "inside" : false
+          },
+          "highColor" : "#1674D9",
+          "projectionType" : "Mercator",
+          "lowColor" : "#C5DBF7",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : "",
+            "showNullValues" : true,
+            "showPercentage" : true,
+            "showDimensions" : true,
+            "showMeasures" : true,
+            "customizeTooltip" : false,
+            "dimensions" : ""
+          },
+          "visualizationType" : "choropleth",
+          "exploreLink" : true,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "binValues" : false,
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+              100,
+              100
+            ],
+            "enable" : false,
+            "type" : "x",
+            "chartsPerLine" : 4
+          },
+          "showActionMenu" : true,
+          "theme" : "dark",
+          "step" : "Clone_of_Average_Tem_2",
+          "map" : "World Countries",
+          "applyConditionalFormatting" : true
+        },
+        "type" : "chart"
+      },
+      "chart_3" : {
+        "parameters" : {
+          "autoFitMode" : "keepLabels",
+          "showValues" : true,
+          "bins" : {
+            "breakpoints" : {
+              "high" : 100,
+              "low" : 0
+            },
+            "bands" : {
+              "high" : {
+                "color" : "#008000",
+                "label" : ""
+              },
+              "low" : {
+                "color" : "#B22222",
+                "label" : ""
+              },
+              "medium" : {
+                "color" : "#ffa500",
+                "label" : ""
+              }
+            }
+          },
+          "legend" : {
+            "descOrder" : false,
+            "showHeader" : false,
+            "show" : true,
+            "customSize" : "auto",
+            "position" : "bottom-center",
+            "inside" : true
+          },
+          "autoZoom" : true,
+          "axisMode" : "multi",
+          "highColor" : "#1674D9",
+          "tooltip" : {
+            "showBinLabel" : true,
+            "measures" : [
+              "avg_Average"
+            ],
+            "showNullValues" : false,
+            "showPercentage" : false,
+            "customText" : "Country: [Country_iso_2]\nAverage Temperature:  [Average Temperature]",
+            "showDimensions" : false,
+            "showMeasures" : false,
+            "customizeTooltip" : true,
+            "dimensions" : [
+              "Country_iso_2"
+            ]
+          },
+          "projectionType" : "Mercator",
+          "lowColor" : "#C5DBF7",
+          "visualizationType" : "choropleth",
+          "exploreLink" : true,
+          "title" : {
+            "fontSize" : 14,
+            "subtitleFontSize" : 11,
+            "label" : "Avg {{cell(display_selector_1.selection, 0, \"Symbol\").asString()}} for {{cell(Year_2.selection, 0, \"Year\").asString()}}",
+            "align" : "center",
+            "subtitleLabel" : ""
+          },
+          "binValues" : false,
+          "trellis" : {
+            "flipLabels" : false,
+            "showGridLines" : true,
+            "size" : [
+              100,
+              100
+            ],
+            "enable" : false,
+            "type" : "x",
+            "chartsPerLine" : 4
+          },
+          "showActionMenu" : true,
+          "measureAxis2" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "measureAxis1" : {
+            "sqrtScale" : false,
+            "showTitle" : true,
+            "showAxis" : true,
+            "title" : "",
+            "customDomain" : {
+              "showDomain" : false
+            }
+          },
+          "theme" : "wave",
+          "step" : "Average_Temperature__1",
+          "map" : "{{cell(Map_Type_1.selection, 0, \"Display\").asString()}}",
+          "dimensionAxis" : {
+            "showTitle" : true,
+            "customSize" : "auto",
+            "showAxis" : true,
+            "title" : "",
+            "icons" : {
+              "useIcons" : false,
+              "iconProps" : {
+                "fit" : "cover",
+                "column" : "",
+                "type" : "round"
+              }
+            }
+          },
+          "applyConditionalFormatting" : true
+        },
+        "type" : "chart"
+      }
+    }
+  }
+}
