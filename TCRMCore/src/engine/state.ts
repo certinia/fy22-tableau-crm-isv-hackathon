@@ -104,15 +104,18 @@ export function previous(s: ModelState): ModelState {
             if (nextStepIndex < 0) {
                 nextStepIndex = 0;
             }
+            const newInverses: Array<Array<Operation>> = clone(s.inverses);
+            newInverses.pop();
             const resultState: ModelStateNormal = {
-                ...newState,
-                step: {
-                    index: nextStepIndex,
-                    elapsedTime: 0
-                }
-            };
+                    ...newState,
+                    inverses: newInverses,
+                    step: {
+                        index: nextStepIndex,
+                        elapsedTime: 0
+                    }
+                };
             if (nextStepIndex < currentStepIndex) {
-                applyStateStepTransition(resultState, false);
+                applyStateStepTransition(s, false);
             }
             return resultState;
         }
@@ -161,10 +164,11 @@ function applyStateStepTransition(s: ModelStateNormal, forward: boolean): Array<
     }
 
     if (!forward) {
-        const steps: Array<Operation> = s.inverses[index]; 
-        let state: State = s.params.getState();
-        applyPatch(state, steps, false, true);
-        s.params.setState(state);
+        const steps: Array<Operation> = s.inverses[index - 1]; 
+        let state: State = s.params.getState(),
+            copied: State = clone(state);
+        applyPatch(copied, steps, false, true);
+        s.params.setState(copied);
     }
 
     return null;
